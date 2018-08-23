@@ -4294,3 +4294,1012 @@ remote: Total 7 (delta 6), reused 1 (delta 0), pack-reused 0[K
   INFO ---------------------------------------------------------------------------
  DEBUG [82f1d19e] Running [ -d ~/.rvm ] on 185.216.25.4
  DEBUG [82f1d19e] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-23 16:27:13 +0200 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1d3eb215] Running [ -d ~/.rvm ] on 185.216.25.94
+ DEBUG [1d3eb215] Command: [ -d ~/.rvm ]
+ DEBUG [662ec26e] Finished in 0.534 seconds with exit status 0 (successful).
+ DEBUG [ea34ff83] Running ~/.rvm/bin/rvm version on 185.216.25.94
+ DEBUG [ea34ff83] Command: ~/.rvm/bin/rvm version
+ DEBUG [cccfcc48] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [cccfcc48] Finished in 0.331 seconds with exit status 0 (successful).
+ DEBUG [4575e54f] Running ~/.rvm/bin/rvm current on 185.216.25.94
+ DEBUG [4575e54f] Command: ~/.rvm/bin/rvm current
+ DEBUG [9fe16552] 	ruby-2.5.1
+ DEBUG [9fe16552] Finished in 0.409 seconds with exit status 0 (successful).
+ DEBUG [bd73e27e] Running ~/.rvm/bin/rvm default do ruby --version on 185.216.25.94
+ DEBUG [bd73e27e] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [f8577807] 	ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+ DEBUG [f8577807] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [0bb2a1be] Running /usr/bin/env mkdir -p /tmp on 185.216.25.94
+ DEBUG [0bb2a1be] Command: /usr/bin/env mkdir -p /tmp
+  INFO [46555e04] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 100.0%
+  INFO [f67133ca] Running /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh on 185.216.25.94
+ DEBUG [f67133ca] Command: /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh
+  INFO [6189fe04] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [849725ad] Running /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD on 185.216.25.94
+ DEBUG [849725ad] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD )
+ DEBUG [095ec986] 	78c61945e8543eda31431f78fb6718b7969325eb	HEAD
+  INFO [095ec986] Finished in 1.471 seconds with exit status 0 (successful).
+  INFO [64c08ca2] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases on 185.216.25.94
+ DEBUG [64c08ca2] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases
+  INFO [406fd9f2] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [28c27cb1] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets on 185.216.25.94
+ DEBUG [28c27cb1] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets
+  INFO [46198d27] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [abd2157a] Running [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ] on 185.216.25.94
+ DEBUG [abd2157a] Command: [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ]
+ DEBUG [4db371f1] Finished in 0.085 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/siopyadmin/apps/siopy/shared/puma.rb 0.0%
+  INFO Uploading /home/siopyadmin/apps/siopy/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [401dd796] Running [ -f /home/siopyadmin/apps/siopy/current/REVISION ] on 185.216.25.94
+ DEBUG [401dd796] Command: [ -f /home/siopyadmin/apps/siopy/current/REVISION ]
+ DEBUG [9d29bb20] Finished in 0.082 seconds with exit status 1 (failed).
+ DEBUG [6906be92] Running [ -f /home/siopyadmin/apps/siopy/repo/HEAD ] on 185.216.25.94
+ DEBUG [6906be92] Command: [ -f /home/siopyadmin/apps/siopy/repo/HEAD ]
+ DEBUG [795be64c] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [9466a44f] Running if test ! -d /home/siopyadmin/apps/siopy; then echo "Directory does not exist '/home/siopyadmin/apps/siopy'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [9466a44f] Command: if test ! -d /home/siopyadmin/apps/siopy; then echo "Directory does not exist '/home/siopyadmin/apps/siopy'" 1>&2; false; fi
+ DEBUG [d75cd3d7] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [3237924e] Running /usr/bin/env git clone --mirror git@github.com:Siopyy/Siopy.git /home/siopyadmin/apps/siopy/repo on 185.216.25.94
+ DEBUG [3237924e] Command: cd /home/siopyadmin/apps/siopy && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git clone --mirror git@github.com:Siopyy/Siopy.git /home/siopyadmin/apps/siopy/repo )
+ DEBUG [422ef491] 	Cloning into bare repository '/home/siopyadmin/apps/siopy/repo'...
+ DEBUG [422ef491] 	remote: Counting objects: 11028, done.[K
+ DEBUG [422ef491] 	remote: Compressing objects:   0% (1/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:   1% (87/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:   2% (173/8616)   [Kremote: Compressing objects:   3% (259/8616)   [Kremote: Compressing objects:   4% (345/8616)   [Kremote: Compressing objects:   5% (431/8616)   [Kremote: Compressing objects:   6% (517/8616)   [Kremote: Compressing objects:   7% (604/8616)   [Kremote: Compressing objects:   8% (690/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:   9% (776/8616)   [Kremote: Compressing objects:  10% (862/8616)   [Kremote: Compressing objects:  11% (948/8616)   [Kremote: Compressing objects:  12% (1034/8616)   [Kremote: Compressing objects:  13% (1121/8616)   [Kremote: Compressing objects:  14% (1207/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:  15% (1293/8616)   [Kremote: Compressing objects:  16% (1379/8616)   [Kremote: Compressing objects:  17% (1465/8616)   [Kremote: Compressing objects:  18% (1551/8616)   [Kremote: Compressing objects:  19% (1638/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:  20% (1724/8616)   [Kremote: Compressing objects:  21% (1810/8616)   [Kremote: Compressing objects:  22% (1896/8616)   [Kremote: Compressing objects:  23% (1982/8616)   [Kremote: Compressing objects:  24% (2068/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:  25% (2154/8616)   [Kremote: Compressing objects:  26% (2241/8616)   [Kremote: Compressing objects:  27% (2327/8616)   [Kremote: Compressing objects:  28% (2413/8616)   [K
+ DEBUG [422ef491] 	remote: Compressing objects:  29% (2499/8616)   [Kremote: Compressing objects:  30% (2585/8616)   [Kremote: Compressing objects:  31% (2671/8616)   [Kremote: Compressing objects:  32% (2758/8616)   [Kremote: Compressing objects:  33% (2844/8616)   [Kremote: Compressing objects:  34% (2930/8616)   [Kremote: Compressing objects:  35% (3016/8616)   [Kremote: Compressing objects:  36% (3102/8616)   [Kremote: Compressing objects:  37% (3188/8616)   [Kremote: Compressing objects:  38% (3275/8616)   [Kremote: Compressing objects:  39% (3361/8616)   [Kremote: Compressing objects:  40% (3447/8616)   [Kremote: Compressing objects:  41% (3533/8616)   [Kremote: Compressing objects:  42% (3619/8616)   [Kremote: Compressing objects:  43% (3705/8616)   [Kremote: Compressing objects:  44% (3792/8616)   [Kremote: Compressing objects:  45% (3878/8616)   [Kremote: Compressing objects:  46% (3964/8616)   [Kremote: Compressing objects:  47% (4050/8616)   [Kremote: Compressing objects:  48% (4136/8616)   [Kremote: Compressing objects:  49% (4222/8616)   [Kremote: Compressing objects:  50% (4308/8616)   [Kremote: Compressing objects:  51% (4395/8616)   [Kremote: Compressing objects:  52% (4481/8616)   [Kremote: Compressing objects:  53% (4567/8616)   [Kremote: Compressing objects:  54% (4653/8616)   [Kremote: Compressing objects:  55% (4739/8616)   [Kremote: Compressing objects:  56% (4825/8616)   [Kremote: Compressing objects:  57% (4912/8616)   [Kremote: Compressing objects:  58% (4998/8616)   [Kremote: Compressing objects:  59% (5084/8616)   [Kremote: Compressing objects:  60% (5170/8616)   [Kremote: Compressing objects:  61% (5256/8616)   [Kremote: Compressing objects:  62% (5342/8616)   [Kremote: Compressing objects:  63% (5429/8616)   [Kremote: Compressing objects:  64% (5515/8616)   [Kremote: Compressing objects:  65% (5601/8616)   [Kremote: Compressing objects:  66% (5687/8616)   [Kremote: Compressing objects:  67% (5773/8616)   [Kremote: Compressing objects:  68% (5859/8616)   [Kremote: Compressing objects:  69% (5946/8616)   [Kremote: Compressing objects:  70% (6032/8616)   [Kremote: Compressing objects:  71% (6118/8616)   [Kremote: Compressing objects:  72% (6204/8616)   [Kremote: Compressing objects:  73% (6290/8616)   [Kremote: Compressing objects:  74% (6376/8616)   [Kremote: Compressing objects:  75% (6462/8616)   [Kremote: Compressing objects:  76% (6549/8616)   [Kremote: Compressing objects:  77% (6635/8616)   [Kremote: Compressing objects:  78% (6721/8616)   [Kremote: Compressing objects:  79% (6807/8616)   [Kremote: Compressing objects:  80% (6893/8616)   [Kremote: Compressing objects:  81% (6979/8616)   [Kremote: Compressing objects:  82% (7066/8616)   [Kremote: Compressing objects:  83% (7152/8616)   [Kremote: Compressing objects:  84% (7238/8616)   [Kremote: Compressing objects:  85% (7324/8616)   [Kremote: Compressing objects:  86% (7410/8616)   [Kremote: Compressing objects:  87% (7496/8616)   [Kremote: Compressing objects:  88% (7583/8616)   [Kremote: Compressing objects:  89% (7669/8616)   [Kremote: Compressing objects:  90% (7755/8616)   [Kremote: Compressing objects:  91% (7841/8616)   [Kremote: Compressing objects:  92% (7927/8616)   [Kremote: Compressing objects:  93% (8013/8616)   [Kremote: Compressing objects:  94% (8100/8616)   [Kremote: Compressing objects:  95% (8186/8616)   [Kremote: Compressing objects:  96% (8272/8616)   [Kremote: Compressing objects:  97% (8358/8616)   [Kremote: Compressing objects:  98% (8444/8616)   [Kremote: Compressing objects:  99% (8530/8616)   [Kremote: Compressing objects: 100% (8616/8616)   [Kremote: Compressing objects: 100% (8616/8616), done.[K
+ DEBUG [422ef491] 	Receiving objects:   0% (1/11028)   
+ DEBUG [422ef491] 	Receiving objects:   1% (111/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   2% (221/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   3% (331/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   4% (442/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   5% (552/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   6% (662/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   7% (772/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   8% (883/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:   9% (993/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  10% (1103/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  11% (1214/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  11% (1288/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  12% (1324/11028), 2.21 MiB | 4.40 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  13% (1434/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  14% (1544/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  15% (1655/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  16% (1765/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  17% (1875/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  18% (1986/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  19% (2096/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  20% (2206/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  21% (2316/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  22% (2427/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  23% (2537/11028), 8.91 MiB | 8.90 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  24% (2647/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  25% (2757/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  26% (2868/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  27% (2978/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  28% (3088/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  29% (3199/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  30% (3309/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  31% (3419/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  32% (3529/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  33% (3640/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  34% (3750/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  35% (3860/11028), 15.54 MiB | 10.36 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  35% (3959/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  36% (3971/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  37% (4081/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  38% (4191/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  39% (4301/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  40% (4412/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  41% (4522/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  42% (4632/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  43% (4743/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  44% (4853/11028), 22.22 MiB | 11.10 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  45% (4963/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  46% (5073/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  47% (5184/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  48% (5294/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  49% (5404/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  50% (5514/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  51% (5625/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  52% (5735/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  53% (5845/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  54% (5956/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  55% (6066/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  56% (6176/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  57% (6286/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  58% (6397/11028), 28.89 MiB | 11.55 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  58% (6406/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  59% (6507/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  60% (6617/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  61% (6728/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  62% (6838/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  63% (6948/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  64% (7058/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  65% (7169/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  66% (7279/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  67% (7389/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  68% (7500/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  69% (7610/11028), 35.56 MiB | 11.84 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  70% (7720/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  71% (7830/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  72% (7941/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  73% (8051/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  74% (8161/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  75% (8271/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  76% (8382/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  77% (8492/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  78% (8602/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  79% (8713/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  80% (8823/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  81% (8933/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  82% (9043/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  83% (9154/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  83% (9160/11028), 42.25 MiB | 12.05 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  84% (9264/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  85% (9374/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  86% (9485/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  87% (9595/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  88% (9705/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  89% (9815/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  90% (9926/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  91% (10036/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  92% (10146/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  93% (10257/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  94% (10367/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  95% (10477/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  96% (10587/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  97% (10698/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  98% (10808/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects:  99% (10918/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	remote: Total 11028 (delta 2008), reused 11015 (delta 1995), pack-reused 0[K
+ DEBUG [422ef491] 	Receiving objects: 100% (11028/11028), 48.93 MiB | 12.21 MiB/s   
+ DEBUG [422ef491] 	Receiving objects: 100% (11028/11028), 54.08 MiB | 12.21 MiB/s, done.
+ DEBUG [422ef491] 	Resolving deltas:   0% (0/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   1% (23/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   2% (43/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   4% (83/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   5% (107/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   6% (123/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   7% (156/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   8% (162/2008)   
+ DEBUG [422ef491] 	Resolving deltas:   9% (189/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  10% (216/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  11% (224/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  12% (251/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  13% (269/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  14% (285/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  15% (311/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  16% (340/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  17% (353/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  18% (367/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  19% (382/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  20% (407/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  21% (431/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  22% (444/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  24% (482/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  25% (517/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  27% (550/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  28% (565/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  30% (607/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  31% (629/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  33% (666/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  34% (683/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  35% (705/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  36% (729/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  37% (749/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  38% (767/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  39% (789/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  40% (804/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  42% (853/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  43% (865/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  44% (893/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  45% (905/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  47% (946/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  48% (964/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  49% (993/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  50% (1008/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  51% (1037/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  52% (1056/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  53% (1067/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  54% (1088/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  55% (1108/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  56% (1136/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  57% (1153/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  58% (1175/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  60% (1208/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  61% (1231/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  62% (1264/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  63% (1267/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  64% (1286/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  66% (1328/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  67% (1346/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  68% (1369/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  69% (1386/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  70% (1414/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  71% (1430/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  72% (1449/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  74% (1487/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  75% (1506/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  76% (1531/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  78% (1567/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  79% (1592/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  80% (1621/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  81% (1646/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  82% (1655/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  83% (1677/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  84% (1687/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  85% (1726/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  86% (1728/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  87% (1750/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  88% (1769/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  89% (1790/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  90% (1810/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  91% (1829/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  92% (1849/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  93% (1868/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  94% (1888/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  95% (1908/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  96% (1928/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  97% (1948/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  98% (1972/2008)   
+ DEBUG [422ef491] 	Resolving deltas:  99% (1988/2008)   
+ DEBUG [422ef491] 	Resolving deltas: 100% (2008/2008)   
+ DEBUG [422ef491] 	Resolving deltas: 100% (2008/2008), done.
+  INFO [422ef491] Finished in 6.317 seconds with exit status 0 (successful).
+ DEBUG [d8df8435] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [d8df8435] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [2535767a] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [c32f1970] Running /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git on 185.216.25.94
+ DEBUG [c32f1970] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git )
+  INFO [9d6c869d] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [9ea7ab2a] Running /usr/bin/env git remote update --prune on 185.216.25.94
+ DEBUG [9ea7ab2a] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a31ce1cf] 	Fetching origin
+  INFO [a31ce1cf] Finished in 1.269 seconds with exit status 0 (successful).
+ DEBUG [6ffa9252] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [6ffa9252] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [21609c9c] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [7b38112e] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142718 on 185.216.25.94
+ DEBUG [7b38112e] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142718 )
+  INFO [c7304969] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [48dcb68e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823142718 on 185.216.25.94
+ DEBUG [48dcb68e] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823142718 )
+  INFO [eb15f578] Finished in 1.300 seconds with exit status 0 (successful).
+ DEBUG [6a3d6d75] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [6a3d6d75] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [1372181f] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [5ca9716d] Running /usr/bin/env git rev-list --max-count=1 master on 185.216.25.94
+ DEBUG [5ca9716d] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9d6c94de] 	78c61945e8543eda31431f78fb6718b7969325eb
+ DEBUG [9d6c94de] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [92fb648a] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142718; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142718'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [92fb648a] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142718; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142718'" 1>&2; false; fi
+ DEBUG [474dafaa] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [4475a111] Running /usr/bin/env echo "78c61945e8543eda31431f78fb6718b7969325eb" > REVISION on 185.216.25.94
+ DEBUG [4475a111] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142718 && /usr/bin/env echo "78c61945e8543eda31431f78fb6718b7969325eb" > REVISION
+  INFO [00e01633] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [9c7105c2] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142718/public on 185.216.25.94
+ DEBUG [9c7105c2] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142718/public
+  INFO [bf297569] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [7a0ef0d0] Running [ -L /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets ] on 185.216.25.94
+ DEBUG [7a0ef0d0] Command: [ -L /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets ]
+ DEBUG [a3a5e7c7] Finished in 0.082 seconds with exit status 1 (failed).
+ DEBUG [b4773d3c] Running [ -d /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets ] on 185.216.25.94
+ DEBUG [b4773d3c] Command: [ -d /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets ]
+ DEBUG [eac7472b] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [f1d03add] Running /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets on 185.216.25.94
+ DEBUG [f1d03add] Command: /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets
+  INFO [306f9405] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [e6894f87] Running /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets on 185.216.25.94
+ DEBUG [e6894f87] Command: /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823142718/public/assets
+  INFO [043779b7] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [4d76bcc1] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142718; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142718'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [4d76bcc1] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142718; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142718'" 1>&2; false; fi
+ DEBUG [f5af550e] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [af953faf] Running ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle on 185.216.25.94
+ DEBUG [af953faf] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142718 && ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle
+ DEBUG [cfdccdc7] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/siopyadmin/apps/siopy/releases/20180823142718/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [cfdccdc7] 	[31mThe following gems are missing[0m
+ DEBUG [cfdccdc7] 	[31m * rake (12.3.1)[0m
+[31m * concurrent-ruby (1.0.5)[0m
+ DEBUG [cfdccdc7] 	[31m * i18n (1.1.0)[0m
+[31m * minitest (5.11.3)[0m
+[31m * thread_safe (0.3.6)[0m
+[31m * tzinfo (1.2.5)[0m
+[31m * activesupport (5.2.0)[0m
+[31m * builder (3.2.3)[0m
+ DEBUG [cfdccdc7] 	[31m * erubi (1.7.1)[0m
+[31m * mini_portile2 (2.3.0)[0m
+ DEBUG [cfdccdc7] 	[31m * nokogiri (1.8.4)[0m
+[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [cfdccdc7] 	[31m * crass (1.0.4)[0m
+[31m * loofah (2.2.2)[0m
+[31m * rails-html-sanitizer (1.0.4)[0m
+[31m * actionview (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * rack (2.0.5)[0m
+ DEBUG [cfdccdc7] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [cfdccdc7] 	[31m * actionpack (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * nio4r (2.3.1)[0m
+ DEBUG [cfdccdc7] 	[31m * websocket-extensions (0.1.3)[0m
+ DEBUG [cfdccdc7] 	[31m * websocket-driver (0.7.0)[0m
+ DEBUG [cfdccdc7] 	[31m * actioncable (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * globalid (0.4.1)[0m
+[31m * activejob (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * mini_mime (1.0.0)[0m
+ DEBUG [cfdccdc7] 	[31m * mail (2.7.0)[0m
+ DEBUG [cfdccdc7] 	[31m * actionmailer (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * activemodel (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * arel (9.0.0)[0m
+ DEBUG [cfdccdc7] 	[31m * activerecord (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [cfdccdc7] 	[31m * marcel (0.3.2)[0m
+ DEBUG [cfdccdc7] 	[31m * activestorage (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * public_suffix (3.0.2)[0m
+ DEBUG [cfdccdc7] 	[31m * addressable (2.5.2)[0m
+ DEBUG [cfdccdc7] 	[31m * net-ssh (5.0.2)[0m
+ DEBUG [cfdccdc7] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [cfdccdc7] 	[31m * sshkit (1.17.0)[0m
+ DEBUG [cfdccdc7] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [cfdccdc7] 	[31m * io-like (0.3.0)[0m
+ DEBUG [cfdccdc7] 	[31m * archive-zip (0.11.0)[0m
+ DEBUG [cfdccdc7] 	[31m * bcrypt (3.1.12)[0m
+ DEBUG [cfdccdc7] 	[31m * bindex (0.5.0)[0m
+ DEBUG [cfdccdc7] 	[31m * msgpack (1.2.4)[0m
+ DEBUG [cfdccdc7] 	[31m * bootsnap (1.3.1)[0m
+ DEBUG [cfdccdc7] 	[31m * method_source (0.9.0)[0m
+ DEBUG [cfdccdc7] 	[31m * thor (0.20.0)[0m
+ DEBUG [cfdccdc7] 	[31m * railties (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * bootstrap-datepicker-rails (1.8.0.1)[0m
+ DEBUG [cfdccdc7] 	[31m * byebug (10.0.2)[0m
+ DEBUG [cfdccdc7] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [cfdccdc7] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [cfdccdc7] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [cfdccdc7] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [cfdccdc7] 	[31m * puma (3.12.0)[0m
+ DEBUG [cfdccdc7] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [cfdccdc7] 	[31m * xpath (3.1.0)[0m
+ DEBUG [cfdccdc7] 	[31m * capybara (3.4.2)[0m
+ DEBUG [cfdccdc7] 	[31m * ffi (1.9.25)[0m
+ DEBUG [cfdccdc7] 	[31m * childprocess (0.9.0)[0m
+ DEBUG [cfdccdc7] 	[31m * chromedriver-helper (1.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [cfdccdc7] 	[31m * execjs (2.7.0)[0m
+ DEBUG [cfdccdc7] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [cfdccdc7] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [cfdccdc7] 	[31m * commonjs (0.2.7)[0m
+ DEBUG [cfdccdc7] 	[31m * orm_adapter (0.5.0)[0m
+ DEBUG [cfdccdc7] 	[31m * responders (2.4.0)[0m
+[31m * warden (1.2.7)[0m
+ DEBUG [cfdccdc7] 	[31m * devise (4.4.3)[0m
+ DEBUG [cfdccdc7] 	[31m * down (4.5.0)[0m
+ DEBUG [cfdccdc7] 	[31m * less (2.6.0)[0m
+ DEBUG [cfdccdc7] 	[31m * font-roboto-rails (0.0.3)[0m
+ DEBUG [cfdccdc7] 	[31m * multi_json (1.13.1)[0m
+ DEBUG [cfdccdc7] 	[31m * jbuilder (2.7.0)[0m
+ DEBUG [cfdccdc7] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [cfdccdc7] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [cfdccdc7] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [cfdccdc7] 	[31m * listen (3.1.5)[0m
+ DEBUG [cfdccdc7] 	[31m * mysql2 (0.5.2)[0m
+ DEBUG [cfdccdc7] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [cfdccdc7] 	[31m * sprockets-rails (3.2.1)[0m
+ DEBUG [cfdccdc7] 	[31m * rails (5.2.0)[0m
+ DEBUG [cfdccdc7] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [cfdccdc7] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [cfdccdc7] 	[31m * sass (3.5.7)[0m
+ DEBUG [cfdccdc7] 	[31m * tilt (2.0.8)[0m
+ DEBUG [cfdccdc7] 	[31m * sass-rails (5.0.7)[0m
+ DEBUG [cfdccdc7] 	[31m * selenium-webdriver (3.13.1)[0m
+ DEBUG [cfdccdc7] 	[31m * shrine (2.11.0)[0m
+ DEBUG [cfdccdc7] 	[31m * spring (2.0.2)[0m
+ DEBUG [cfdccdc7] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [cfdccdc7] 	[31m * uglifier (4.1.17)[0m
+ DEBUG [cfdccdc7] 	[31m * web-console (3.6.2)[0m
+ DEBUG [cfdccdc7] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [cfdccdc7] Finished in 0.963 seconds with exit status 1 (failed).
+  INFO [f85c3afc] Running ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet on 185.216.25.94
+ DEBUG [f85c3afc] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142718 && ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet
+ DEBUG [32e842d6] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/siopyadmin/apps/siopy/releases/20180823142718/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-23 16:28:23 +0200 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [23534809] Running [ -d ~/.rvm ] on 185.216.25.94
+ DEBUG [23534809] Command: [ -d ~/.rvm ]
+ DEBUG [16621bad] Finished in 0.532 seconds with exit status 0 (successful).
+ DEBUG [cedd0db9] Running ~/.rvm/bin/rvm version on 185.216.25.94
+ DEBUG [cedd0db9] Command: ~/.rvm/bin/rvm version
+ DEBUG [421b8d68] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [421b8d68] Finished in 0.417 seconds with exit status 0 (successful).
+ DEBUG [f7e59c7a] Running ~/.rvm/bin/rvm current on 185.216.25.94
+ DEBUG [f7e59c7a] Command: ~/.rvm/bin/rvm current
+ DEBUG [10fcbb4d] 	ruby-2.5.1
+ DEBUG [10fcbb4d] Finished in 0.410 seconds with exit status 0 (successful).
+ DEBUG [144fa8b9] Running ~/.rvm/bin/rvm default do ruby --version on 185.216.25.94
+ DEBUG [144fa8b9] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [f403c206] 	ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+ DEBUG [f403c206] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [498db78e] Running /usr/bin/env mkdir -p /tmp on 185.216.25.94
+ DEBUG [498db78e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5eb8bb47] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 100.0%
+  INFO [09ff0af3] Running /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh on 185.216.25.94
+ DEBUG [09ff0af3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh
+  INFO [9c8a21bd] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [b46a2ad8] Running /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD on 185.216.25.94
+ DEBUG [b46a2ad8] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD )
+ DEBUG [56da3489] 	78c61945e8543eda31431f78fb6718b7969325eb	HEAD
+  INFO [56da3489] Finished in 1.431 seconds with exit status 0 (successful).
+  INFO [9b152a14] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases on 185.216.25.94
+ DEBUG [9b152a14] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases
+  INFO [ab0f3026] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [de97bdba] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets on 185.216.25.94
+ DEBUG [de97bdba] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets
+  INFO [14d07fd7] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [818d2286] Running [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ] on 185.216.25.94
+ DEBUG [818d2286] Command: [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ]
+ DEBUG [a02211f2] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [dec761c3] Running [ -f /home/siopyadmin/apps/siopy/current/REVISION ] on 185.216.25.94
+ DEBUG [dec761c3] Command: [ -f /home/siopyadmin/apps/siopy/current/REVISION ]
+ DEBUG [12027b07] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [c561c3cb] Running [ -f /home/siopyadmin/apps/siopy/repo/HEAD ] on 185.216.25.94
+ DEBUG [c561c3cb] Command: [ -f /home/siopyadmin/apps/siopy/repo/HEAD ]
+ DEBUG [7f1e52eb] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/siopyadmin/apps/siopy/repo
+ DEBUG [2fc4955b] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [2fc4955b] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [a9f91bc2] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [7646cffd] Running /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git on 185.216.25.94
+ DEBUG [7646cffd] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git )
+  INFO [a1a8c5e2] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [5964c6f1] Running /usr/bin/env git remote update --prune on 185.216.25.94
+ DEBUG [5964c6f1] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ac5ef786] 	Fetching origin
+  INFO [ac5ef786] Finished in 1.524 seconds with exit status 0 (successful).
+ DEBUG [8509aee6] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [8509aee6] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [9016bdc9] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [581d7fb1] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142827 on 185.216.25.94
+ DEBUG [581d7fb1] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142827 )
+  INFO [d55ce75c] Finished in 0.206 seconds with exit status 0 (successful).
+  INFO [9d98224a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823142827 on 185.216.25.94
+ DEBUG [9d98224a] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823142827 )
+  INFO [85e9c25a] Finished in 1.294 seconds with exit status 0 (successful).
+ DEBUG [96fe7d85] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [96fe7d85] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [1c759c90] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [f52a3851] Running /usr/bin/env git rev-list --max-count=1 master on 185.216.25.94
+ DEBUG [f52a3851] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9c430f04] 	78c61945e8543eda31431f78fb6718b7969325eb
+ DEBUG [9c430f04] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [85f8fcee] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [85f8fcee] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi
+ DEBUG [1a7a8680] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [1a8ae8f0] Running /usr/bin/env echo "78c61945e8543eda31431f78fb6718b7969325eb" > REVISION on 185.216.25.94
+ DEBUG [1a8ae8f0] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && /usr/bin/env echo "78c61945e8543eda31431f78fb6718b7969325eb" > REVISION
+  INFO [d5ef26e8] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [c7154b61] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142827/public on 185.216.25.94
+ DEBUG [c7154b61] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142827/public
+  INFO [852941f0] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [77788ead] Running [ -L /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets ] on 185.216.25.94
+ DEBUG [77788ead] Command: [ -L /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets ]
+ DEBUG [1bec87b0] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [4874b686] Running [ -d /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets ] on 185.216.25.94
+ DEBUG [4874b686] Command: [ -d /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets ]
+ DEBUG [4af57946] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [cc772b23] Running /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets on 185.216.25.94
+ DEBUG [cc772b23] Command: /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets
+  INFO [79d0f567] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [3c8503c1] Running /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets on 185.216.25.94
+ DEBUG [3c8503c1] Command: /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets
+  INFO [0312977f] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [b5be0eb6] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [b5be0eb6] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi
+ DEBUG [b486fd04] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [a4c3d7ac] Running ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle on 185.216.25.94
+ DEBUG [a4c3d7ac] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle
+ DEBUG [6c87d2de] 	[31mThe following gems are missing[0m
+ DEBUG [6c87d2de] 	[31m * nokogiri (1.8.4)[0m
+ DEBUG [6c87d2de] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [6c87d2de] 	[31m * crass (1.0.4)[0m
+ DEBUG [6c87d2de] 	[31m * loofah (2.2.2)[0m
+ DEBUG [6c87d2de] 	[31m * rails-html-sanitizer (1.0.4)[0m
+ DEBUG [6c87d2de] 	[31m * actionview (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * rack (2.0.5)[0m
+ DEBUG [6c87d2de] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [6c87d2de] 	[31m * actionpack (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * nio4r (2.3.1)[0m
+ DEBUG [6c87d2de] 	[31m * websocket-extensions (0.1.3)[0m
+ DEBUG [6c87d2de] 	[31m * websocket-driver (0.7.0)[0m
+ DEBUG [6c87d2de] 	[31m * actioncable (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * globalid (0.4.1)[0m
+ DEBUG [6c87d2de] 	[31m * activejob (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * mini_mime (1.0.0)[0m
+ DEBUG [6c87d2de] 	[31m * mail (2.7.0)[0m
+ DEBUG [6c87d2de] 	[31m * actionmailer (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * activemodel (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * arel (9.0.0)[0m
+ DEBUG [6c87d2de] 	[31m * activerecord (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [6c87d2de] 	[31m * marcel (0.3.2)[0m
+ DEBUG [6c87d2de] 	[31m * activestorage (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * public_suffix (3.0.2)[0m
+ DEBUG [6c87d2de] 	[31m * addressable (2.5.2)[0m
+ DEBUG [6c87d2de] 	[31m * net-ssh (5.0.2)[0m
+ DEBUG [6c87d2de] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [6c87d2de] 	[31m * sshkit (1.17.0)[0m
+ DEBUG [6c87d2de] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [6c87d2de] 	[31m * io-like (0.3.0)[0m
+ DEBUG [6c87d2de] 	[31m * archive-zip (0.11.0)[0m
+ DEBUG [6c87d2de] 	[31m * bcrypt (3.1.12)[0m
+ DEBUG [6c87d2de] 	[31m * bindex (0.5.0)[0m
+ DEBUG [6c87d2de] 	[31m * msgpack (1.2.4)[0m
+ DEBUG [6c87d2de] 	[31m * bootsnap (1.3.1)[0m
+ DEBUG [6c87d2de] 	[31m * method_source (0.9.0)[0m
+ DEBUG [6c87d2de] 	[31m * thor (0.20.0)[0m
+ DEBUG [6c87d2de] 	[31m * railties (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * bootstrap-datepicker-rails (1.8.0.1)[0m
+ DEBUG [6c87d2de] 	[31m * byebug (10.0.2)[0m
+ DEBUG [6c87d2de] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [6c87d2de] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [6c87d2de] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [6c87d2de] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [6c87d2de] 	[31m * puma (3.12.0)[0m
+ DEBUG [6c87d2de] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [6c87d2de] 	[31m * xpath (3.1.0)[0m
+ DEBUG [6c87d2de] 	[31m * capybara (3.4.2)[0m
+ DEBUG [6c87d2de] 	[31m * ffi (1.9.25)[0m
+ DEBUG [6c87d2de] 	[31m * childprocess (0.9.0)[0m
+[31m * chromedriver-helper (1.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [6c87d2de] 	[31m * execjs (2.7.0)[0m
+[31m * coffee-script (2.4.1)[0m
+ DEBUG [6c87d2de] 	
+ DEBUG [6c87d2de] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [6c87d2de] 	[31m * commonjs (0.2.7)[0m
+ DEBUG [6c87d2de] 	[31m * orm_adapter (0.5.0)[0m
+ DEBUG [6c87d2de] 	[31m * responders (2.4.0)[0m
+ DEBUG [6c87d2de] 	[31m * warden (1.2.7)[0m
+ DEBUG [6c87d2de] 	[31m * devise (4.4.3)[0m
+ DEBUG [6c87d2de] 	[31m * down (4.5.0)[0m
+ DEBUG [6c87d2de] 	[31m * less (2.6.0)[0m
+ DEBUG [6c87d2de] 	[31m * font-roboto-rails (0.0.3)[0m
+ DEBUG [6c87d2de] 	[31m * multi_json (1.13.1)[0m
+ DEBUG [6c87d2de] 	[31m * jbuilder (2.7.0)[0m
+ DEBUG [6c87d2de] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [6c87d2de] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [6c87d2de] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [6c87d2de] 	[31m * listen (3.1.5)[0m
+ DEBUG [6c87d2de] 	[31m * mysql2 (0.5.2)[0m
+ DEBUG [6c87d2de] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [6c87d2de] 	[31m * sprockets-rails (3.2.1)[0m
+ DEBUG [6c87d2de] 	[31m * rails (5.2.0)[0m
+ DEBUG [6c87d2de] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [6c87d2de] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [6c87d2de] 	[31m * sass (3.5.7)[0m
+ DEBUG [6c87d2de] 	[31m * tilt (2.0.8)[0m
+ DEBUG [6c87d2de] 	[31m * sass-rails (5.0.7)[0m
+ DEBUG [6c87d2de] 	[31m * selenium-webdriver (3.13.1)[0m
+ DEBUG [6c87d2de] 	[31m * shrine (2.11.0)[0m
+ DEBUG [6c87d2de] 	[31m * spring (2.0.2)[0m
+ DEBUG [6c87d2de] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [6c87d2de] 	[31m * uglifier (4.1.17)[0m
+ DEBUG [6c87d2de] 	[31m * web-console (3.6.2)[0m
+ DEBUG [6c87d2de] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [6c87d2de] Finished in 0.922 seconds with exit status 1 (failed).
+  INFO [66976a53] Running ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet on 185.216.25.94
+ DEBUG [66976a53] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet
+  INFO [2478af7c] Finished in 87.420 seconds with exit status 0 (successful).
+ DEBUG [e86a96b2] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [e86a96b2] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi
+ DEBUG [e49d0b5a] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [9f79219b] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 185.216.25.94
+ DEBUG [9f79219b] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [9edbd4fe] 	Yarn executable was not detected in the system.
+Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:08.319966 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/jquery-3.3.1.min-550d29f1cb1282d0b87ee68a72635f6cc728b0e43f43944c818f06bf72c3ebac.js
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:08.345556 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/jquery-3.3.1.min-550d29f1cb1282d0b87ee68a72635f6cc728b0e43f43944c818f06bf72c3ebac.js.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:09.594128 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/popper.min-33189cd8814043b4f9b988a956e205f1c8c25cd8df4b615f2591a618240a25e7.js
+I, [2018-08-23T14:30:09.594299 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/popper.min-33189cd8814043b4f9b988a956e205f1c8c25cd8df4b615f2591a618240a25e7.js.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:15.592326 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/mdb.min-d57a0b7bdad20653fc641bd4e1465dad15ec412bc37e5dbed6cedde825e23a36.css
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:15.592506 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/mdb.min-d57a0b7bdad20653fc641bd4e1465dad15ec412bc37e5dbed6cedde825e23a36.css.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:35.773630 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/mdb.min-87bc3493a955db5af89280c05ac5ef1fa4c99b9b7f6d40f4dc29962352fd3838.js
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:35.774583 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/mdb.min-87bc3493a955db5af89280c05ac5ef1fa4c99b9b7f6d40f4dc29962352fd3838.js.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:35.817975 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/datatables.min-076d9a584df8fa0dd77283f8eabb76d79edfdbadea1e7338049073a434e15a9b.css
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:35.820539 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/datatables.min-076d9a584df8fa0dd77283f8eabb76d79edfdbadea1e7338049073a434e15a9b.css.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.293725 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/datatables.min-b4ceb6af7dbfe268328566ab384dd4783853f0b82c13e4798277becc09b77ae1.js
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.294378 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/datatables.min-b4ceb6af7dbfe268328566ab384dd4783853f0b82c13e4798277becc09b77ae1.js.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.301820 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Bold-a2ca27e10e7111ca13d7b9368c4b55a165ebf24b40ac16ec715cd3881204bb3a.eot
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.302153 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Bold-a2ca27e10e7111ca13d7b9368c4b55a165ebf24b40ac16ec715cd3881204bb3a.eot.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.310891 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Bold-594d74a49e307be7cc9e1ee5f1023684e6820cf11bcc968bee590391e1ad5a5a.ttf
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.311419 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Bold-594d74a49e307be7cc9e1ee5f1023684e6820cf11bcc968bee590391e1ad5a5a.ttf.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.323496 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Bold-e7cbaf29c3812b80577cb845b5d359486242338f25620ba65260e265464fe359.woff
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.326750 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Bold-8b84b2abc336ee61f48a28a697b6ace2333ea5f1868aa15d5aeb2c7beac6d716.woff2
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.329859 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Light-2517b97e2c0e1e6c8ceb9dd007015f897926bc504154137281eec4c1a9f9bdc9.eot
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.330273 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Light-2517b97e2c0e1e6c8ceb9dd007015f897926bc504154137281eec4c1a9f9bdc9.eot.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.338331 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Light-ee4352049603e5960550f55444ad720d8d4ce322c0dcba1afc77de78c430d0d5.ttf
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.338948 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Light-ee4352049603e5960550f55444ad720d8d4ce322c0dcba1afc77de78c430d0d5.ttf.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.349747 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Light-2cbb012f1d36c09d3f17100ef2cf8213cbd429d9e519dff536c12ed6f07a0d25.woff
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.352611 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Light-94a0ac8d73bb60a9cbe27a4fa36669104f6ffa37c8ff2df29313a6c0d3b64a75.woff2
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.355466 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Medium-714646396932c3ed852f6946b0149ad7fe3eaca63eb0f507abd4742afa3f1ac1.eot
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.355862 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Medium-714646396932c3ed852f6946b0149ad7fe3eaca63eb0f507abd4742afa3f1ac1.eot.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.359731 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Medium-6e2ec5c5f89e4ce302bb93b46cb7cc336236501de17348e284878914c5e0e723.ttf
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.360271 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Medium-6e2ec5c5f89e4ce302bb93b46cb7cc336236501de17348e284878914c5e0e723.ttf.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.371635 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Medium-72841a4c4171b13ab1edf2c8f8046f0958f2ff608ce4e0d568dd5c6319f8a933.woff
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.374520 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Medium-1cd5c4b37938d932110ec043ce1cc766d18cacf7a4e7cffa6a539855d5bdc08d.woff2
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.377264 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Regular-cbb656ad18b9fa7d67c2d6e67372be1bc5924f9ad9a708619a31597de23ce8c0.eot
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.377634 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Regular-cbb656ad18b9fa7d67c2d6e67372be1bc5924f9ad9a708619a31597de23ce8c0.eot.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.381582 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Regular-bde8a188e37aa936b167aecc5e5a3da40262f6e51fd54c584f2cf2b6b99d96ca.ttf
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.382171 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Regular-bde8a188e37aa936b167aecc5e5a3da40262f6e51fd54c584f2cf2b6b99d96ca.ttf.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.392953 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Regular-2cd6b07b7855716761250290ce3cf447ccc98e793e484294d3fa8ccbb55b016a.woff
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.395806 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Regular-b5c9c23bd12593523a46d79dd0aee80e3226bbde4c9ac05fc30a95e2c1510de0.woff2
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.398467 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Thin-ec8252b3a3f3a07433ad90409b707abd59b88f74dae0878ea97dd4d5357ea5ae.eot
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.398841 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Thin-ec8252b3a3f3a07433ad90409b707abd59b88f74dae0878ea97dd4d5357ea5ae.eot.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.402479 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Thin-db1d464343bf795307bc90da83d65b93c841fb20f38662f92f1e5e2c5a1d2ec5.ttf
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.403065 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Thin-db1d464343bf795307bc90da83d65b93c841fb20f38662f92f1e5e2c5a1d2ec5.ttf.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.414039 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Thin-ae65b047fa4032f18a40480a93d1aae6707a756e7b3bb5f060467cd1f59b1625.woff
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.416907 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/roboto/Roboto-Thin-fbcf22e622baa9226f9f2dcd2ce4975c9babc01a52eaf9397557a97cdebd7e40.woff2
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.419703 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/Ruby_logo-a91a3ee3b3ac1e0ba95e964651b09e1124633a893a8e7e8f2f47dd57196e7bfb.svg
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.420084 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/Ruby_logo-a91a3ee3b3ac1e0ba95e964651b09e1124633a893a8e7e8f2f47dd57196e7bfb.svg.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.423340 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/courspics-0a7f88d27af011d2591db022c63a6d30ed97a75a319db4874cdb36dc805ceb59.svg
+I, [2018-08-23T14:30:39.423689 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/courspics-0a7f88d27af011d2591db022c63a6d30ed97a75a319db4874cdb36dc805ceb59.svg.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.426137 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/logo-2fb48b480cad389026b5fea41f71a0e9c896cb57fabc5814b5ea66e56c9a49cd.png
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.436109 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/svg_logo-32f790ea44da1f191e371c392facbe9ac1f0db21432785285935e0c422272605.svg
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:30:39.439320 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/svg_logo-32f790ea44da1f191e371c392facbe9ac1f0db21432785285935e0c422272605.svg.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:31:10.490131 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/application-5b23ef7b47bbbf519f0f0956c8eabae84409b16271c1423f8b24a9f553fa0032.js
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:31:10.491365 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/application-5b23ef7b47bbbf519f0f0956c8eabae84409b16271c1423f8b24a9f553fa0032.js.gz
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:31:16.717822 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/application-627080adcc94fa85906b46f8a1aaeb0f3406430ac1d225857a92c61fecf8e4c6.css
+ DEBUG [9edbd4fe] 	I, [2018-08-23T14:31:16.718706 #32403]  INFO -- : Writing /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/application-627080adcc94fa85906b46f8a1aaeb0f3406430ac1d225857a92c61fecf8e4c6.css.gz
+  INFO [9edbd4fe] Finished in 76.126 seconds with exit status 0 (successful).
+ DEBUG [ef74b566] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [ef74b566] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi
+ DEBUG [21cbb023] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [1ef51a17] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142827/assets_manifest_backup on 185.216.25.94
+ DEBUG [1ef51a17] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823142827/assets_manifest_backup
+  INFO [c99d8931] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [cc5d7ba9] Running /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest* on 185.216.25.94
+ DEBUG [cc5d7ba9] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest*
+ DEBUG [dae5862a] 	/home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json
+ DEBUG [dae5862a] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [160b182a] Running /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest* on 185.216.25.94
+ DEBUG [160b182a] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest*
+ DEBUG [1f1d6535] 	/home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json
+ DEBUG [1f1d6535] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [02fe96fd] Running /usr/bin/env cp /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json /home/siopyadmin/apps/siopy/releases/20180823142827/assets_manifest_backup on 185.216.25.94
+ DEBUG [02fe96fd] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && /usr/bin/env cp /home/siopyadmin/apps/siopy/releases/20180823142827/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json /home/siopyadmin/apps/siopy/releases/20180823142827/assets_manifest_backup
+  INFO [045a6de2] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [7637bff6] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [7637bff6] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823142827; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823142827'" 1>&2; false; fi
+ DEBUG [4a385f90] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [1d5a49b9] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 185.216.25.94
+ DEBUG [1d5a49b9] Command: cd /home/siopyadmin/apps/siopy/releases/20180823142827 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [6a1963a2] 	rake aborted!
+Mysql2::Error: Access denied for user 'root'@'localhost'
+ DEBUG [6a1963a2] 	/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `connect'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `initialize'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/connection_handling.rb:90:in `connection'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.0/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+/home/siopyadmin/apps/siopy/shared/bundle/ruby/2.5.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/cli/exec.rb:28:in `run'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/cli.rb:424:in `exec'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/cli.rb:27:in `dispatch'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/cli.rb:18:in `start'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/exe/bundle:30:in `block in <top (required)>'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/gems/bundler-1.16.4/exe/bundle:22:in `<top (required)>'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/bin/bundle:23:in `load'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/bin/bundle:23:in `<main>'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/bin/ruby_executable_hooks:24:in `eval'
+/home/siopyadmin/.rvm/gems/ruby-2.5.1/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [6a1963a2] 	Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-23 16:41:55 +0200 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [444a7e33] Running [ -d ~/.rvm ] on 185.216.25.94
+ DEBUG [444a7e33] Command: [ -d ~/.rvm ]
+ DEBUG [08740bae] Finished in 0.530 seconds with exit status 0 (successful).
+ DEBUG [e5de0754] Running ~/.rvm/bin/rvm version on 185.216.25.94
+ DEBUG [e5de0754] Command: ~/.rvm/bin/rvm version
+ DEBUG [ed6e535c] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [ed6e535c] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [48e03f94] Running ~/.rvm/bin/rvm current on 185.216.25.94
+ DEBUG [48e03f94] Command: ~/.rvm/bin/rvm current
+ DEBUG [f307fa5e] 	ruby-2.5.1
+ DEBUG [f307fa5e] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [89e28eb7] Running ~/.rvm/bin/rvm default do ruby --version on 185.216.25.94
+ DEBUG [89e28eb7] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [3d7bf462] 	ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+ DEBUG [3d7bf462] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [5bfaaac1] Running /usr/bin/env mkdir -p /tmp on 185.216.25.94
+ DEBUG [5bfaaac1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a0ad50fa] Finished in 0.232 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 100.0%
+  INFO [1f48c0ff] Running /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh on 185.216.25.94
+ DEBUG [1f48c0ff] Command: /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh
+  INFO [321ba144] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [ccdecae0] Running /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD on 185.216.25.94
+ DEBUG [ccdecae0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD )
+ DEBUG [643adca4] 	78c61945e8543eda31431f78fb6718b7969325eb	HEAD
+  INFO [643adca4] Finished in 1.284 seconds with exit status 0 (successful).
+  INFO [e6ffa8d5] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases on 185.216.25.94
+ DEBUG [e6ffa8d5] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases
+  INFO [16495c9c] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [30a18bad] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets on 185.216.25.94
+ DEBUG [30a18bad] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets
+  INFO [4b22e149] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG [1da1c1ce] Running [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ] on 185.216.25.94
+ DEBUG [1da1c1ce] Command: [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ]
+ DEBUG [40d2755c] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [55d35273] Running [ -f /home/siopyadmin/apps/siopy/current/REVISION ] on 185.216.25.94
+ DEBUG [55d35273] Command: [ -f /home/siopyadmin/apps/siopy/current/REVISION ]
+ DEBUG [ac81b95e] Finished in 0.155 seconds with exit status 1 (failed).
+ DEBUG [fa4f9477] Running [ -f /home/siopyadmin/apps/siopy/repo/HEAD ] on 185.216.25.94
+ DEBUG [fa4f9477] Command: [ -f /home/siopyadmin/apps/siopy/repo/HEAD ]
+ DEBUG [c251d9b2] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/siopyadmin/apps/siopy/repo
+ DEBUG [e1656c1d] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [e1656c1d] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [70d67e9c] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [6992e9a6] Running /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git on 185.216.25.94
+ DEBUG [6992e9a6] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git )
+  INFO [a851201b] Finished in 0.203 seconds with exit status 0 (successful).
+  INFO [57451376] Running /usr/bin/env git remote update --prune on 185.216.25.94
+ DEBUG [57451376] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [23b7c5ca] 	Fetching origin
+  INFO [23b7c5ca] Finished in 2.726 seconds with exit status 0 (successful).
+ DEBUG [605309d2] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [605309d2] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [10ce40ef] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [03859a9f] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823144159 on 185.216.25.94
+ DEBUG [03859a9f] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823144159 )
+  INFO [f5b8c011] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [55c4e04d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823144159 on 185.216.25.94
+ DEBUG [55c4e04d] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823144159 )
+  INFO [1bb04e82] Finished in 1.403 seconds with exit status 0 (successful).
+ DEBUG [39b4a71a] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [39b4a71a] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [b679d811] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [7c113a9b] Running /usr/bin/env git rev-list --max-count=1 master on 185.216.25.94
+ DEBUG [7c113a9b] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [60b67bd1] 	78c61945e8543eda31431f78fb6718b7969325eb
+ DEBUG [60b67bd1] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [c22ea485] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [c22ea485] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi
+ DEBUG [66253b5a] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [3fce2be5] Running /usr/bin/env echo "78c61945e8543eda31431f78fb6718b7969325eb" > REVISION on 185.216.25.94
+ DEBUG [3fce2be5] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && /usr/bin/env echo "78c61945e8543eda31431f78fb6718b7969325eb" > REVISION
+  INFO [bbf34258] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [4b69ce92] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823144159/public on 185.216.25.94
+ DEBUG [4b69ce92] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823144159/public
+  INFO [01bdb48c] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [dd4ba604] Running [ -L /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets ] on 185.216.25.94
+ DEBUG [dd4ba604] Command: [ -L /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets ]
+ DEBUG [dc1fe1bc] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [568521d8] Running [ -d /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets ] on 185.216.25.94
+ DEBUG [568521d8] Command: [ -d /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets ]
+ DEBUG [b77fc030] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [dc8c6618] Running /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets on 185.216.25.94
+ DEBUG [dc8c6618] Command: /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets
+  INFO [aa365758] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [869b0c51] Running /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets on 185.216.25.94
+ DEBUG [869b0c51] Command: /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets
+  INFO [7caa6b04] Finished in 0.285 seconds with exit status 0 (successful).
+ DEBUG [4f8af4ee] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [4f8af4ee] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi
+ DEBUG [a95af5df] Finished in 0.228 seconds with exit status 0 (successful).
+ DEBUG [255fe7d3] Running ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle on 185.216.25.94
+ DEBUG [255fe7d3] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle
+ DEBUG [0eecd830] 	[31mThe following gems are missing[0m
+ DEBUG [0eecd830] 	[31m * public_suffix (3.0.2)[0m
+ DEBUG [0eecd830] 	[31m * addressable (2.5.2)[0m
+ DEBUG [0eecd830] 	[31m * net-ssh (5.0.2)[0m
+ DEBUG [0eecd830] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [0eecd830] 	[31m * sshkit (1.17.0)[0m
+ DEBUG [0eecd830] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [0eecd830] 	[31m * io-like (0.3.0)[0m
+ DEBUG [0eecd830] 	[31m * archive-zip (0.11.0)[0m
+ DEBUG [0eecd830] 	[31m * bindex (0.5.0)[0m
+ DEBUG [0eecd830] 	[31m * byebug (10.0.2)[0m
+ DEBUG [0eecd830] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [0eecd830] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [0eecd830] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [0eecd830] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [0eecd830] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [0eecd830] 	[31m * xpath (3.1.0)[0m
+ DEBUG [0eecd830] 	[31m * capybara (3.4.2)[0m
+ DEBUG [0eecd830] 	[31m * childprocess (0.9.0)[0m
+ DEBUG [0eecd830] 	[31m * chromedriver-helper (1.2.0)[0m
+ DEBUG [0eecd830] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [0eecd830] 	[31m * listen (3.1.5)[0m
+ DEBUG [0eecd830] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [0eecd830] 	[31m * selenium-webdriver (3.13.1)[0m
+ DEBUG [0eecd830] 	[31m * spring (2.0.2)[0m
+ DEBUG [0eecd830] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [0eecd830] 	[31m * web-console (3.6.2)[0m
+ DEBUG [0eecd830] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [0eecd830] Finished in 1.190 seconds with exit status 1 (failed).
+  INFO [999b6008] Running ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet on 185.216.25.94
+ DEBUG [999b6008] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet
+  INFO [de3a7904] Finished in 1.802 seconds with exit status 0 (successful).
+ DEBUG [eea56708] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [eea56708] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi
+ DEBUG [57e81b31] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [e2070d83] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 185.216.25.94
+ DEBUG [e2070d83] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [07c174c4] 	Yarn executable was not detected in the system.
+Download Yarn at https://yarnpkg.com/en/docs/install
+  INFO [07c174c4] Finished in 74.003 seconds with exit status 0 (successful).
+ DEBUG [4567724c] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [4567724c] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi
+ DEBUG [8559fe12] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [39351eff] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823144159/assets_manifest_backup on 185.216.25.94
+ DEBUG [39351eff] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823144159/assets_manifest_backup
+  INFO [6768985f] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [80917784] Running /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest* on 185.216.25.94
+ DEBUG [80917784] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest*
+ DEBUG [b9cfff17] 	/home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json
+ DEBUG [b9cfff17] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [69d65961] Running /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest* on 185.216.25.94
+ DEBUG [69d65961] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest*
+ DEBUG [d60cfe7f] 	/home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json
+ DEBUG [d60cfe7f] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [1707701e] Running /usr/bin/env cp /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json /home/siopyadmin/apps/siopy/releases/20180823144159/assets_manifest_backup on 185.216.25.94
+ DEBUG [1707701e] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && /usr/bin/env cp /home/siopyadmin/apps/siopy/releases/20180823144159/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json /home/siopyadmin/apps/siopy/releases/20180823144159/assets_manifest_backup
+  INFO [1519bb8e] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [28b2eb3b] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [28b2eb3b] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823144159; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823144159'" 1>&2; false; fi
+ DEBUG [354a347f] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [1857dca2] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 185.216.25.94
+ DEBUG [1857dca2] Command: cd /home/siopyadmin/apps/siopy/releases/20180823144159 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [56c9279b] 	== 20180801125839 DeviseCreateUsers: migrating ================================
+ DEBUG [56c9279b] 	-- create_table(:users)
+ DEBUG [56c9279b] 	   -> 0.0063s
+ DEBUG [56c9279b] 	-- add_index(:users, :username, {:unique=>true})
+ DEBUG [56c9279b] 	   -> 0.0039s
+ DEBUG [56c9279b] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [56c9279b] 	   -> 0.0041s
+ DEBUG [56c9279b] 	-- add_index(:users, :reset_password_token, {:unique=>true})
+ DEBUG [56c9279b] 	   -> 0.0036s
+ DEBUG [56c9279b] 	== 20180801125839 DeviseCreateUsers: migrated (0.0181s) =======================
+
+ DEBUG [56c9279b] 	== 20180804191812 AddApprovedToUser: migrating ================================
+ DEBUG [56c9279b] 	-- add_column(:users, :approved, :boolean, {:default=>false, :null=>false})
+ DEBUG [56c9279b] 	   -> 0.0095s
+-- add_index(:users, :approved)
+ DEBUG [56c9279b] 	   -> 0.0038s
+ DEBUG [56c9279b] 	== 20180804191812 AddApprovedToUser: migrated (0.0134s) =======================
+
+ DEBUG [56c9279b] 	== 20180813092728 CreateCourses: migrating ====================================
+ DEBUG [56c9279b] 	-- create_table(:courses)
+ DEBUG [56c9279b] 	   -> 0.0052s
+ DEBUG [56c9279b] 	== 20180813092728 CreateCourses: migrated (0.0052s) ===========================
+ DEBUG [56c9279b] 	
+ DEBUG [56c9279b] 	== 20180816053722 TableProfessors: migrating ==================================
+ DEBUG [56c9279b] 	-- create_table(:professors)
+ DEBUG [56c9279b] 	   -> 0.0044s
+ DEBUG [56c9279b] 	-- add_column(:professors, :professor_name, :string)
+ DEBUG [56c9279b] 	   -> 0.0060s
+ DEBUG [56c9279b] 	== 20180816053722 TableProfessors: migrated (0.0105s) =========================
+
+ DEBUG [56c9279b] 	== 20180816061522 TableCourseCategories: migrating ============================
+ DEBUG [56c9279b] 	-- create_table(:course_categories)
+ DEBUG [56c9279b] 	   -> 0.0043s
+ DEBUG [56c9279b] 	-- add_column(:course_categories, :name, :string)
+ DEBUG [56c9279b] 	   -> 0.0058s
+ DEBUG [56c9279b] 	-- add_column(:course_categories, :professor_id, :integer)
+ DEBUG [56c9279b] 	   -> 0.0051s
+ DEBUG [56c9279b] 	-- add_index(:course_categories, :professor_id)
+ DEBUG [56c9279b] 	   -> 0.0034s
+ DEBUG [56c9279b] 	== 20180816061522 TableCourseCategories: migrated (0.0188s) ===================
+
+ DEBUG [56c9279b] 	== 20180816082413 AddCategoryIdToCourses: migrating ===========================
+ DEBUG [56c9279b] 	-- add_column(:courses, :course_category_id, :integer)
+ DEBUG [56c9279b] 	   -> 0.0062s
+-- add_index(:courses, :course_category_id)
+ DEBUG [56c9279b] 	   -> 0.0036s
+ DEBUG [56c9279b] 	== 20180816082413 AddCategoryIdToCourses: migrated (0.0099s) ==================
+
+ DEBUG [56c9279b] 	== 20180821055043 AddCourseToCourses: migrating ===============================
+ DEBUG [56c9279b] 	-- add_column(:courses, :course_data, :text)
+ DEBUG [56c9279b] 	   -> 0.0065s
+ DEBUG [56c9279b] 	== 20180821055043 AddCourseToCourses: migrated (0.0066s) ======================
+
+ DEBUG [56c9279b] 	== 20180821112518 CreateWorks: migrating ======================================
+ DEBUG [56c9279b] 	-- create_table(:works)
+ DEBUG [56c9279b] 	   -> 0.0048s
+ DEBUG [56c9279b] 	== 20180821112518 CreateWorks: migrated (0.0049s) =============================
+
+ DEBUG [56c9279b] 	== 20180821121517 AddCourseCategoryIdToWorks: migrating =======================
+ DEBUG [56c9279b] 	-- add_column(:works, :course_category_id, :integer)
+ DEBUG [56c9279b] 	   -> 0.0061s
+ DEBUG [56c9279b] 	-- add_index(:works, :course_category_id)
+ DEBUG [56c9279b] 	   -> 0.0032s
+ DEBUG [56c9279b] 	== 20180821121517 AddCourseCategoryIdToWorks: migrated (0.0094s) ==============
+
+  INFO [56c9279b] Finished in 2.025 seconds with exit status 0 (successful).
+  INFO [6e587ce6] Running /usr/bin/env ln -s /home/siopyadmin/apps/siopy/releases/20180823144159 /home/siopyadmin/apps/siopy/releases/current on 185.216.25.94
+ DEBUG [6e587ce6] Command: /usr/bin/env ln -s /home/siopyadmin/apps/siopy/releases/20180823144159 /home/siopyadmin/apps/siopy/releases/current
+  INFO [cf59a52e] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [6e3b8f74] Running /usr/bin/env mv /home/siopyadmin/apps/siopy/releases/current /home/siopyadmin/apps/siopy on 185.216.25.94
+ DEBUG [6e3b8f74] Command: /usr/bin/env mv /home/siopyadmin/apps/siopy/releases/current /home/siopyadmin/apps/siopy
+  INFO [dbf969ea] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [dde106f2] Running /usr/bin/env ls -x /home/siopyadmin/apps/siopy/releases on 185.216.25.94
+ DEBUG [dde106f2] Command: /usr/bin/env ls -x /home/siopyadmin/apps/siopy/releases
+ DEBUG [17978ecd] 	20180823142718	20180823142827	20180823144159
+ DEBUG [17978ecd] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [2b7c35d5] Running mkdir /home/siopyadmin/apps/siopy/shared/tmp/sockets -p on 185.216.25.94
+ DEBUG [2b7c35d5] Command: mkdir /home/siopyadmin/apps/siopy/shared/tmp/sockets -p
+  INFO [c9b9b85c] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [3e6d378f] Running mkdir /home/siopyadmin/apps/siopy/shared/tmp/pids -p on 185.216.25.94
+ DEBUG [3e6d378f] Command: mkdir /home/siopyadmin/apps/siopy/shared/tmp/pids -p
+  INFO [a064653e] Finished in 0.106 seconds with exit status 0 (successful).
+ DEBUG [d2ed1a8a] Running [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ] on 185.216.25.94
+ DEBUG [d2ed1a8a] Command: [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ]
+ DEBUG [4667a022] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO using conf file /home/siopyadmin/apps/siopy/shared/puma.rb
+ DEBUG [46e3fe2a] Running [ -f /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ] on 185.216.25.94
+ DEBUG [46e3fe2a] Command: [ -f /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ]
+ DEBUG [edec3799] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [871697d3] Running if test ! -d /home/siopyadmin/apps/siopy/current; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/current'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [871697d3] Command: if test ! -d /home/siopyadmin/apps/siopy/current; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/current'" 1>&2; false; fi
+ DEBUG [79fcdf0b] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [0c1600af] Running ~/.rvm/bin/rvm default do bundle exec puma -C /home/siopyadmin/apps/siopy/shared/puma.rb --daemon on 185.216.25.94
+ DEBUG [0c1600af] Command: cd /home/siopyadmin/apps/siopy/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec puma -C /home/siopyadmin/apps/siopy/shared/puma.rb --daemon )
+ DEBUG [f5eedb32] 	Puma starting in single mode...
+ DEBUG [f5eedb32] 	* Version 3.12.0 (ruby 2.5.1-p57), codename: Llamas in Pajamas
+ DEBUG [f5eedb32] 	* Min threads: 4, max threads: 16
+ DEBUG [f5eedb32] 	* Environment: production
+ DEBUG [f5eedb32] 	* Daemonizing...
+  INFO [f5eedb32] Finished in 1.234 seconds with exit status 0 (successful).
+ DEBUG [47a4f74c] Running if test ! -d /home/siopyadmin/apps/siopy/current; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/current'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [47a4f74c] Command: if test ! -d /home/siopyadmin/apps/siopy/current; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/current'" 1>&2; false; fi
+ DEBUG [d617ff35] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [2d03a429] Running [ -f /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ] on 185.216.25.94
+ DEBUG [2d03a429] Command: [ -f /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ]
+ DEBUG [5c5d170f] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [727fb4d2] Running if test ! -d /home/siopyadmin/apps/siopy/releases; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [727fb4d2] Command: if test ! -d /home/siopyadmin/apps/siopy/releases; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases'" 1>&2; false; fi
+ DEBUG [8d5d1d67] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [64f6c589] Running /usr/bin/env echo "Branch master (at 78c61945e8543eda31431f78fb6718b7969325eb) deployed as release 20180823144159 by jocelyndev" >> /home/siopyadmin/apps/siopy/revisions.log on 185.216.25.94
+ DEBUG [64f6c589] Command: cd /home/siopyadmin/apps/siopy/releases && /usr/bin/env echo "Branch master (at 78c61945e8543eda31431f78fb6718b7969325eb) deployed as release 20180823144159 by jocelyndev" >> /home/siopyadmin/apps/siopy/revisions.log
+  INFO [2af5b637] Finished in 0.096 seconds with exit status 0 (successful).
