@@ -4289,3 +4289,8 @@ remote: Total 7 (delta 6), reused 1 (delta 0), pack-reused 0[K
   INFO [44f5be2c] Running /usr/bin/env rm -rf /home/root/apps/Siopy/releases/20180823111954 /home/root/apps/Siopy/releases/20180823112053 on 185.216.25.94
  DEBUG [44f5be2c] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" ; /usr/bin/env rm -rf /home/root/apps/Siopy/releases/20180823111954 /home/root/apps/Siopy/releases/20180823112053 )
   INFO [db5c114b] Finished in 0.970 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-23 16:25:10 +0200 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [82f1d19e] Running [ -d ~/.rvm ] on 185.216.25.4
+ DEBUG [82f1d19e] Command: [ -d ~/.rvm ]

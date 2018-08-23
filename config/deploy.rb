@@ -1,5 +1,5 @@
 # Change these
-server '185.216.25.4', port: 192, roles: [:web, :app, :db], primary: true
+server '185.216.25.94', port: 192, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Siopyy/Siopy.git'
 set :application,     'siopy'
