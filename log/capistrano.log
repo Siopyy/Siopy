@@ -5741,3 +5741,222 @@ Download Yarn at https://yarnpkg.com/en/docs/install
 * Environment: production
 * Daemonizing...
   INFO [eeaf2247] Finished in 1.328 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-23 21:20:50 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [df9cefef] Running [ -d ~/.rvm ] on 185.216.25.94
+ DEBUG [df9cefef] Command: [ -d ~/.rvm ]
+ DEBUG [efb9bcbc] Finished in 0.675 seconds with exit status 0 (successful).
+ DEBUG [2ed707ee] Running ~/.rvm/bin/rvm version on 185.216.25.94
+ DEBUG [2ed707ee] Command: ~/.rvm/bin/rvm version
+ DEBUG [fb90bc64] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [fb90bc64] Finished in 0.589 seconds with exit status 0 (successful).
+ DEBUG [eafb0889] Running ~/.rvm/bin/rvm current on 185.216.25.94
+ DEBUG [eafb0889] Command: ~/.rvm/bin/rvm current
+ DEBUG [7d86b868] 	ruby-2.5.1
+ DEBUG [7d86b868] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [981990ba] Running ~/.rvm/bin/rvm default do ruby --version on 185.216.25.94
+ DEBUG [981990ba] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [0a6846ab] 	ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+ DEBUG [0a6846ab] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [17bcd021] Running /usr/bin/env mkdir -p /tmp on 185.216.25.94
+ DEBUG [17bcd021] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8963af52] Finished in 0.162 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-siopy-production-jocelyndev.sh 100.0%
+  INFO [f6e5f5d6] Running /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh on 185.216.25.94
+ DEBUG [f6e5f5d6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-siopy-production-jocelyndev.sh
+  INFO [b2148eaa] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [bd04c684] Running /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD on 185.216.25.94
+ DEBUG [bd04c684] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git ls-remote git@github.com:Siopyy/Siopy.git HEAD )
+ DEBUG [cd7a951b] 	00e9c56f8fa1b5510b4680290d1222a146448132	HEAD
+  INFO [cd7a951b] Finished in 1.742 seconds with exit status 0 (successful).
+  INFO [296ab558] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases on 185.216.25.94
+ DEBUG [296ab558] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared /home/siopyadmin/apps/siopy/releases
+  INFO [65921498] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [01c5f1f3] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets on 185.216.25.94
+ DEBUG [01c5f1f3] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/shared/public/assets
+  INFO [ca0e9256] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [134f0655] Running [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ] on 185.216.25.94
+ DEBUG [134f0655] Command: [ -f /home/siopyadmin/apps/siopy/shared/puma.rb ]
+ DEBUG [20d21f3d] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [817bd4ca] Running [ -f /home/siopyadmin/apps/siopy/current/REVISION ] on 185.216.25.94
+ DEBUG [817bd4ca] Command: [ -f /home/siopyadmin/apps/siopy/current/REVISION ]
+ DEBUG [febf5ee0] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [d74f5623] Running /usr/bin/env cat /home/siopyadmin/apps/siopy/current/REVISION 2>/dev/null on 185.216.25.94
+ DEBUG [d74f5623] Command: /usr/bin/env cat /home/siopyadmin/apps/siopy/current/REVISION 2>/dev/null
+ DEBUG [4256e809] 	a57485f00cdb16a58431a2fc5732d7d70ae4dd9f
+ DEBUG [4256e809] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [3b1f334a] Running [ -f /home/siopyadmin/apps/siopy/repo/HEAD ] on 185.216.25.94
+ DEBUG [3b1f334a] Command: [ -f /home/siopyadmin/apps/siopy/repo/HEAD ]
+ DEBUG [9d85b7a6] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/siopyadmin/apps/siopy/repo
+ DEBUG [060fc963] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [060fc963] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [a7e92291] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [d0114667] Running /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git on 185.216.25.94
+ DEBUG [d0114667] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote set-url origin git@github.com:Siopyy/Siopy.git )
+  INFO [350b332c] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [8ccd0b01] Running /usr/bin/env git remote update --prune on 185.216.25.94
+ DEBUG [8ccd0b01] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [4bc651cf] 	Fetching origin
+ DEBUG [4bc651cf] 	remote: Counting objects: 6, done.[K
+remote: Compressing objects:  16% (1/6)   [K
+ DEBUG [4bc651cf] 	remote: Compressing objects:  33% (2/6)   [Kremote: Compressing objects:  50% (3/6)   [Kremote: Compressing objects:  66% (4/6)   [Kremote: Compressing objects:  83% (5/6)   [Kremote: Compressing objects: 100% (6/6)   [Kremote: Compressing objects: 100% (6/6), done.[K
+ DEBUG [4bc651cf] 	remote: Total 6 (delta 5), reused 1 (delta 0), pack-reused 0[K
+ DEBUG [4bc651cf] 	Unpacking objects:  16% (1/6)   
+ DEBUG [4bc651cf] 	Unpacking objects:  33% (2/6)   
+ DEBUG [4bc651cf] 	Unpacking objects:  50% (3/6)   
+ DEBUG [4bc651cf] 	Unpacking objects:  66% (4/6)   
+ DEBUG [4bc651cf] 	Unpacking objects:  83% (5/6)   
+ DEBUG [4bc651cf] 	Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+ DEBUG [4bc651cf] 	From github.com:Siopyy/Siopy
+   a57485f..00e9c56  master     -> master
+  INFO [4bc651cf] Finished in 2.150 seconds with exit status 0 (successful).
+ DEBUG [bb6f1076] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [bb6f1076] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [ce80d807] Finished in 0.106 seconds with exit status 0 (successful).
+  INFO [88ff7b3b] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823192056 on 185.216.25.94
+ DEBUG [88ff7b3b] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823192056 )
+  INFO [47469234] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [d813abd9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823192056 on 185.216.25.94
+ DEBUG [d813abd9] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/siopyadmin/apps/siopy/releases/20180823192056 )
+  INFO [12ed2ecb] Finished in 1.462 seconds with exit status 0 (successful).
+ DEBUG [d9fe6d78] Running if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [d9fe6d78] Command: if test ! -d /home/siopyadmin/apps/siopy/repo; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/repo'" 1>&2; false; fi
+ DEBUG [0d415b33] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [cf422f08] Running /usr/bin/env git rev-list --max-count=1 master on 185.216.25.94
+ DEBUG [cf422f08] Command: cd /home/siopyadmin/apps/siopy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-siopy-production-jocelyndev.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [5ba5ce5c] 	00e9c56f8fa1b5510b4680290d1222a146448132
+ DEBUG [5ba5ce5c] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG [c3bed645] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [c3bed645] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi
+ DEBUG [14b45229] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [827af171] Running /usr/bin/env echo "00e9c56f8fa1b5510b4680290d1222a146448132" > REVISION on 185.216.25.94
+ DEBUG [827af171] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && /usr/bin/env echo "00e9c56f8fa1b5510b4680290d1222a146448132" > REVISION
+  INFO [502beab3] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [74640ef1] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823192056/public on 185.216.25.94
+ DEBUG [74640ef1] Command: /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823192056/public
+  INFO [a1f144ea] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [ca5daa42] Running [ -L /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets ] on 185.216.25.94
+ DEBUG [ca5daa42] Command: [ -L /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets ]
+ DEBUG [1306182e] Finished in 0.166 seconds with exit status 1 (failed).
+ DEBUG [a7293f92] Running [ -d /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets ] on 185.216.25.94
+ DEBUG [a7293f92] Command: [ -d /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets ]
+ DEBUG [de072219] Finished in 0.207 seconds with exit status 0 (successful).
+  INFO [9482e3b8] Running /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets on 185.216.25.94
+ DEBUG [9482e3b8] Command: /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets
+  INFO [e7ab0e5d] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [2252269a] Running /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets on 185.216.25.94
+ DEBUG [2252269a] Command: /usr/bin/env ln -s /home/siopyadmin/apps/siopy/shared/public/assets /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets
+  INFO [2938bf6e] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG [0490f6dc] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [0490f6dc] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi
+ DEBUG [006d1eaa] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG [6db9985d] Running ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle on 185.216.25.94
+ DEBUG [6db9985d] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && ~/.rvm/bin/rvm default do bundle check --path /home/siopyadmin/apps/siopy/shared/bundle
+ DEBUG [aa73b118] 	[31mThe following gems are missing[0m
+[31m * public_suffix (3.0.2)[0m
+ DEBUG [aa73b118] 	[31m * addressable (2.5.2)[0m
+ DEBUG [aa73b118] 	[31m * net-ssh (5.0.2)[0m
+[31m * net-scp (1.2.1)[0m
+ DEBUG [aa73b118] 	[31m * sshkit (1.17.0)[0m
+ DEBUG [aa73b118] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [aa73b118] 	[31m * io-like (0.3.0)[0m
+ DEBUG [aa73b118] 	[31m * archive-zip (0.11.0)[0m
+ DEBUG [aa73b118] 	[31m * bindex (0.5.0)[0m
+ DEBUG [aa73b118] 	[31m * byebug (10.0.2)[0m
+ DEBUG [aa73b118] 	[31m * capistrano (3.11.0)[0m
+ DEBUG [aa73b118] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [aa73b118] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [aa73b118] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [aa73b118] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [aa73b118] 	[31m * xpath (3.1.0)[0m
+ DEBUG [aa73b118] 	[31m * capybara (3.4.2)[0m
+ DEBUG [aa73b118] 	[31m * childprocess (0.9.0)[0m
+ DEBUG [aa73b118] 	[31m * chromedriver-helper (1.2.0)[0m
+ DEBUG [aa73b118] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [aa73b118] 	[31m * listen (3.1.5)[0m
+ DEBUG [aa73b118] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [aa73b118] 	[31m * selenium-webdriver (3.13.1)[0m
+ DEBUG [aa73b118] 	[31m * spring (2.0.2)[0m
+ DEBUG [aa73b118] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [aa73b118] 	[31m * web-console (3.6.2)[0m
+ DEBUG [aa73b118] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [aa73b118] Finished in 1.051 seconds with exit status 1 (failed).
+  INFO [20c994a7] Running ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet on 185.216.25.94
+ DEBUG [20c994a7] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && ~/.rvm/bin/rvm default do bundle install --path /home/siopyadmin/apps/siopy/shared/bundle --without development test --deployment --quiet
+  INFO [d1d48705] Finished in 1.820 seconds with exit status 0 (successful).
+ DEBUG [e4b5e33f] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [e4b5e33f] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi
+ DEBUG [a2e5c275] Finished in 0.164 seconds with exit status 0 (successful).
+  INFO [430d798b] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 185.216.25.94
+ DEBUG [430d798b] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [fbb69c9e] 	Yarn executable was not detected in the system.
+Download Yarn at https://yarnpkg.com/en/docs/install
+  INFO [fbb69c9e] Finished in 76.019 seconds with exit status 0 (successful).
+ DEBUG [47810205] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [47810205] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi
+ DEBUG [a355a440] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [599b85d0] Running /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823192056/assets_manifest_backup on 185.216.25.94
+ DEBUG [599b85d0] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && /usr/bin/env mkdir -p /home/siopyadmin/apps/siopy/releases/20180823192056/assets_manifest_backup
+  INFO [3231a6ff] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [00ec07d5] Running /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest* on 185.216.25.94
+ DEBUG [00ec07d5] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest*
+ DEBUG [8785ea8c] 	/home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json
+ DEBUG [8785ea8c] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [7ef58f81] Running /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest* on 185.216.25.94
+ DEBUG [7ef58f81] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && /usr/bin/env ls /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest*
+ DEBUG [f475e084] 	/home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json
+ DEBUG [f475e084] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [e7238e07] Running /usr/bin/env cp /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json /home/siopyadmin/apps/siopy/releases/20180823192056/assets_manifest_backup on 185.216.25.94
+ DEBUG [e7238e07] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && /usr/bin/env cp /home/siopyadmin/apps/siopy/releases/20180823192056/public/assets/.sprockets-manifest-41d9390f88ea7c65f3fc5d45e082ae2a.json /home/siopyadmin/apps/siopy/releases/20180823192056/assets_manifest_backup
+  INFO [f8810a98] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [2ec740be] Running if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [2ec740be] Command: if test ! -d /home/siopyadmin/apps/siopy/releases/20180823192056; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases/20180823192056'" 1>&2; false; fi
+ DEBUG [2edd07b6] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [4ff4e03a] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 185.216.25.94
+ DEBUG [4ff4e03a] Command: cd /home/siopyadmin/apps/siopy/releases/20180823192056 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [f98f04cf] Finished in 2.371 seconds with exit status 0 (successful).
+  INFO [66da8d36] Running /usr/bin/env ln -s /home/siopyadmin/apps/siopy/releases/20180823192056 /home/siopyadmin/apps/siopy/releases/current on 185.216.25.94
+ DEBUG [66da8d36] Command: /usr/bin/env ln -s /home/siopyadmin/apps/siopy/releases/20180823192056 /home/siopyadmin/apps/siopy/releases/current
+  INFO [2adddac4] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [a441a0c8] Running /usr/bin/env mv /home/siopyadmin/apps/siopy/releases/current /home/siopyadmin/apps/siopy on 185.216.25.94
+ DEBUG [a441a0c8] Command: /usr/bin/env mv /home/siopyadmin/apps/siopy/releases/current /home/siopyadmin/apps/siopy
+  INFO [fb9d26fb] Finished in 0.175 seconds with exit status 0 (successful).
+ DEBUG [4a9c8939] Running /usr/bin/env ls -x /home/siopyadmin/apps/siopy/releases on 185.216.25.94
+ DEBUG [4a9c8939] Command: /usr/bin/env ls -x /home/siopyadmin/apps/siopy/releases
+ DEBUG [2fe6df29] 	20180823142718	20180823142827	20180823144159	20180823144811	20180823183709
+20180823192056
+ DEBUG [2fe6df29] Finished in 0.164 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 185.216.25.94
+ DEBUG [79caad68] Running [ -d /home/siopyadmin/apps/siopy/current ] on 185.216.25.94
+ DEBUG [79caad68] Command: [ -d /home/siopyadmin/apps/siopy/current ]
+ DEBUG [9489af61] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [69cf88bc] Running /usr/bin/env readlink /home/siopyadmin/apps/siopy/current on 185.216.25.94
+ DEBUG [69cf88bc] Command: /usr/bin/env readlink /home/siopyadmin/apps/siopy/current
+ DEBUG [93443a00] 	/home/siopyadmin/apps/siopy/releases/20180823192056
+ DEBUG [93443a00] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [1a3b7886] Running /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823142718 on 185.216.25.94
+ DEBUG [1a3b7886] Command: /usr/bin/env rm -rf /home/siopyadmin/apps/siopy/releases/20180823142718
+  INFO [7f83932d] Finished in 1.152 seconds with exit status 0 (successful).
+ DEBUG [73720954] Running if test ! -d /home/siopyadmin/apps/siopy/releases; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [73720954] Command: if test ! -d /home/siopyadmin/apps/siopy/releases; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/releases'" 1>&2; false; fi
+ DEBUG [55588302] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO [f056213a] Running /usr/bin/env echo "Branch master (at 00e9c56f8fa1b5510b4680290d1222a146448132) deployed as release 20180823192056 by jocelyndev" >> /home/siopyadmin/apps/siopy/revisions.log on 185.216.25.94
+ DEBUG [f056213a] Command: cd /home/siopyadmin/apps/siopy/releases && /usr/bin/env echo "Branch master (at 00e9c56f8fa1b5510b4680290d1222a146448132) deployed as release 20180823192056 by jocelyndev" >> /home/siopyadmin/apps/siopy/revisions.log
+  INFO [c46f3ee6] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [4d028516] Running if test ! -d /home/siopyadmin/apps/siopy/current; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/current'" 1>&2; false; fi on 185.216.25.94
+ DEBUG [4d028516] Command: if test ! -d /home/siopyadmin/apps/siopy/current; then echo "Directory does not exist '/home/siopyadmin/apps/siopy/current'" 1>&2; false; fi
+ DEBUG [1ac27183] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [2cdc662b] Running [ -f /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ] on 185.216.25.94
+ DEBUG [2cdc662b] Command: [ -f /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ]
+ DEBUG [40e64b2d] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG [83f70a82] Running /usr/bin/env kill -0 $( cat /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ) on 185.216.25.94
+ DEBUG [83f70a82] Command: cd /home/siopyadmin/apps/siopy/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.pid ) )
+ DEBUG [cf9bc8b8] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [769577ed] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.state -F /home/siopyadmin/apps/siopy/shared/puma.rb restart on 185.216.25.94
+ DEBUG [769577ed] Command: cd /home/siopyadmin/apps/siopy/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/siopyadmin/apps/siopy/shared/tmp/pids/puma.state -F /home/siopyadmin/apps/siopy/shared/puma.rb restart )
+ DEBUG [792679fb] 	Command restart sent success
+  INFO [792679fb] Finished in 1.090 seconds with exit status 0 (successful).
