@@ -1,16 +1,15 @@
 # Change these
-server '185.216.25.94', port: 22, roles: [:web, :app, :db], primary: true
+server '185.216.25.4', port: 192, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Siopyy/Siopy.git'
-set :application,     'Siopy'
-set :user,            'root'
+set :application,     'siopy'
+set :user,            'siopyadmin'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
 # Don't change these unless you know what you're doing
 set :pty,             true
 set :use_sudo,        false
-set :assets_roles, [:web, :app]
 set :stage,           :production
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
@@ -23,6 +22,7 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+
 ## Defaults:
 # set :scm,           :git
 # set :branch,        :master
@@ -79,7 +79,6 @@ namespace :deploy do
   after  :finishing,    :restart
 end
 
-set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
