@@ -1,0 +1,52 @@
+<header>
+  <% content_for :title, "Voir le cours - Siopy.fr" %>
+</header>
+
+<style>
+  .card {
+    border : 0px;
+  }
+  .success-color {
+    background-color: #114861!important;
+  }
+</style>
+
+<br>
+<br>
+<div class="container">
+
+  <div class="card card-cascade wider">
+
+    <!-- Card image -->
+    <div class="view view-cascade gradient-card-header success-color">
+
+      <!-- Title -->
+      <h2 class="card-header-title mb-3"><%= @course.name %></h2>
+      <!-- Text -->
+      <div class="row justify-content-center">
+        <p class="mb-0"><i class="fa fa-calendar mr-2"></i><%= @course.course_date %></p>
+        <p class="mb-0"><i class="fa fa-graduation-cap mr-2 ml-3"></i><%= Course_category.find(@course.course_category_id).name %> (<%= Professor.find(@course.course_category_id).professor_name %>)</p>
+      </div>
+
+
+    </div>
+
+    <!-- Card content -->
+    <div class="card-body card-body-cascade text-center">
+
+      <!-- Text -->
+      <p class="card-text"><%= @course.description %>.</p>
+      <!-- Link -->
+      <div class="row" style="margin-left: 70%;">
+        <a href="<%= edit_course_path(@course) %>" class="orange-text d-flex flex-row-reverse p-2">
+          <h5 class="waves-effect waves-light">Modifier<i class="fa fa-pencil ml-2"></i></h5>
+        </a>
+        <a href="<%= @course.course_url %>" class="orange-text d-flex flex-row-reverse p-2">
+          <h5 class="waves-effect waves-light">Télécharger<i class="fa fa-download ml-2"></i></h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

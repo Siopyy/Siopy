@@ -1,0 +1,61 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+en:
+  devise:
+    confirmations:
+      confirmed: "Votre adresse e-mail a été confirmée avec succès."
+      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_paranoid_instructions: "Vous recevrez un email pour confirmer votre adresse email dans quelques minutes."
+    failure:
+      already_authenticated: "Vous êtes déjà connecté."
+      inactive: "Votre compte n'est pas encore activé."
+      invalid: "%{authentication_keys} ou mot de passe invalide."
+      locked: "Votre compte est bloqué."
+      last_attempt: "Vous avez encore une tentative avant que votre compte ne soit verrouillé."
+      not_found_in_database: "Invalide %{authentication_keys} ou mot de passe."
+      timeout: "Votre session a expiré. Veuillez vous reconnecter pour continuer."
+      unauthenticated: "Vous devez vous connecter ou vous inscrire avant de continuer."
+      unconfirmed: "Vous devez confirmer votre adresse e-mail avant de continuer."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructions de confirmation"
+      reset_password_instructions:
+        subject: "instructions pour réinitialiser son mot de passe"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email modifié"
+      password_change:
+        subject: "Mot de passe modifié"
+    passwords:
+      no_token: "Vous ne pouvez pas accéder à cette page sans provenir d'un e-mail de réinitialisation du mot de passe. Si vous provenez d'un e-mail de réinitialisation de mot de passe, assurez-vous que vous avez utilisé l'URL complète fournie."
+      send_instructions: "Vous recevrez un e-mail avec des instructions sur la réinitialisation de votre mot de passe dans quelques minutes."
+      send_paranoid_instructions: "Si votre adresse e-mail existe dans notre base de données, vous recevrez un lien de récupération de mot de passe à votre adresse e-mail dans quelques minutes."
+      updated: "Votre mot de passe a été changé avec succès. Vous êtes maintenant connecté."
+      updated_not_active: "Votre mot de passe a été changé avec succès."
+    registrations:
+      destroyed: "Au revoir ! Votre compte a été supprimé avec succès. Nous espérons te revoir bientôt."
+      signed_up: "Bienvenue ! Vous vous êtes inscrit avec succès."
+      signed_up_but_inactive: "Vous vous êtes inscrit avec succès. Cependant, nous n'avons pas pu vous connecter car votre compte n'est pas encore activé."
+      signed_up_but_locked: "Vous vous êtes inscrit avec succès. Cependant, nous ne pouvons pas vous connecter car votre compte est verrouillé."
+      signed_up_but_unconfirmed: "Un message avec un lien de confirmation a été envoyé à votre adresse e-mail. Veuillez suivre le lien pour activer votre compte."
+      update_needs_confirmation: "Vous avez correctement mis à jour votre compte, mais nous devons vérifier votre nouvelle adresse e-mail. Veuillez vérifier votre adresse e-mail et suivez le lien de confirmation pour confirmer votre nouvelle adresse e-mail."
+      updated: "Votre compte a été mis à jour avec succès."
+    sessions:
+      signed_in: "Connecté avec succès."
+      signed_out: "Vous êtes désormais déconnecté."
+      already_signed_out: "Vous êtes désormais déconnecté."
+    unlocks:
+      send_instructions: "Vous recevrez un email avec les instructions pour déverrouiller votre compte dans quelques minutes."
+      send_paranoid_instructions: "Si votre compte existe, vous recevrez un e-mail avec des instructions pour le déverrouiller en quelques minutes."
+      unlocked: "Votre compte a été débloqué avec succès. Veuillez vous connecter pour continuer."
+  errors:
+    messages:
+      already_confirmed: "était déjà confirmé, s'il vous plaît essayez de vous connecter."
+      confirmation_period_expired: "doit être confirmé dans %{period}, merci de demander un nouveau email de confirmation."
+      expired: "a expiré, s'il vous plaît demander un nouveau email de confirmation"
+      not_found: "Non trouvé"
+      not_locked: "n'était pas verrouillé"
+      not_saved:
+        one: "1 erreur a empêché cette %{resource} d'être enregistrée:"
+        other: "%{count} erreurs ont empêchés cette %{resource} d'être enregistrée:"

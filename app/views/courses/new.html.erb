@@ -1,0 +1,25 @@
+<header>
+  <% content_for :title, "Mettre en ligne un cours - Siopy.fr" %>
+</header>
+
+<style>
+  select {
+    display: inline-block!important;
+  }
+</style>
+<h3 style="color: grey; text-align: center">METTRE EN LIGNE UN COURS</h3>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="offset-3 col-md-6">
+      <br>
+      <p class="p-3 mb-2 text-white " style="background-color: #114861">Important : Pour la mise en ligne de plusieurs fichiers, merci de créer
+        une archive .rar ou .zip</p>
+      <br>
+      <%= render 'form', course: @course %>
+    </div>
+  </div>
+</div>
+
+
+

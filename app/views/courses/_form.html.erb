@@ -1,0 +1,45 @@
+<%= form_with(model: course, local: true) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger" role="alert">
+        <h5 class="alert-heading"><%= pluralize(course.errors.count, "erreur(s)") %> :</h5>
+        <% course.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </div>
+      <ul>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nom du cours" %>
+    <%= form.text_field :name, :required => true, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= form.label :description, "Description" %>
+    <%= form.text_area :description, :required => true, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= form.label :course_category_id, "Catégorie" %>
+    <%= form.collection_select(:course_category_id, Course_category.all, :id, :name, {:prompt=>true}, {:class=>'form-control', :required=>true}) %>
+  </div>
+
+  <div class="field mt-3 mb-3">
+    <%= form.label :course_date, "Date du cours" %>
+    <%= form.text_field :course_date, :data => {:provide => "datepicker", 'date-format' => 'dd/mm/yyyy'}, :required => true, class: "form-control", :autocomplete => :off %>
+  </div>
+
+  <div class="field mt-3 mb-3">
+    <%= form.label :course, "Fichier(s)" %>
+    <%= form.hidden_field :course, value: course.cached_course_data %>
+    <%= form.file_field :course %>
+  </div>
+
+
+  <div class="actions">
+    <center><%= form.submit "Valider", class: "btn btn-success" %></center>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<style>
+  .btn-info {
+    background-color: #114861 !important;
+  }
+</style>
+
+<%= form_with(model: work, local: true) do |form| %>
+  <% if work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+      <% work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mt-5">
+    <%= form.label :work_name, "Nom du devoirs" %>
+    <%= form.text_field :work_name, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= form.label :work_description, "Description" %>
+    <%= form.text_area :work_description, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= form.label :work_date, "Date du devoir" %>
+    <%= form.text_field :work_date, :data => {:provide => "datepicker", 'date-format' => 'dd/mm/yyyy'}, :required => true, class: "form-control", :autocomplete => :off %>
+  </div>
+
+  <div class="field mt-3">
+    <%= form.label :course_category_id, "Catégorie" %>
+    <%= form.collection_select(:course_category_id, Course_category.all, :id, :name, {:prompt => true}, {:class => 'form-control', :required => true}) %>
+  </div>
+
+  <div class="actions mt-3">
+    <%= form.submit "Valider", class: "btn btn-info pull-right" %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<header>
+  <% content_for :title, "Editer le cours - Siopy.fr" %>
+</header>
+
+<style>
+  select {
+    display: inline-block!important;
+  }
+</style>
+
+<h3 style="color: grey; text-align: center">EDITER LE COURS</h3>
+<hr>
+
+<div class="container">
+  <%= render 'form', course: @course %>
+</div>
+
+

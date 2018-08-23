@@ -1,0 +1,66 @@
+<header>
+  <% content_for :title, "Mon profil - Siopy.fr" %>
+</header>
+
+<style>
+  .card-header {
+    color: white;
+    font-weight: bold;
+
+  }
+    .cyan-skin .card-header {
+      background-color: #114861;
+    }
+</style>
+
+<div class="container">
+  <div class="offset-3 col-md-6">
+    <div class="card text-center">
+      <div class="card-header">
+        Mon compte
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"><%= @users.first_name %> <%= @users.last_name %></h3>
+        <p class="card-text">
+          <% if @users.is_admin? %>
+            Administrateur
+          <% else %>
+            Utilisateur
+          <% end %>
+        </p>
+
+        <div class="col-md-12 mt-5">
+          <div class="mt-3">
+            <strong>Nom d'utilisateur :</strong> <%= @users.username %>
+          </div>
+          <hr>
+        </div>
+        <div class="col-md-12 mt-1">
+          <div class="mt-3">
+            <strong>Nom :</strong> <%= @users.last_name %>
+          </div>
+          <hr>
+        </div>
+        <div class="col-md-12 mt-1">
+          <div class="mt-3">
+            <strong>Prénom :</strong> <%= @users.first_name %>
+          </div>
+          <hr>
+        </div>
+        <div class="col-md-12 mt-1">
+          <div class="mt-3">
+            <strong>Adresse mail :</strong> <%= @users.email %>
+          </div>
+          <hr>
+        </div>
+
+
+        <a href="<%= edit_user_registration_path %>" class="btn btn-primary mt-5">Editer mon profil</a>
+      </div>
+      <div class="card-footer text-muted">
+        <% time = @users.last_sign_in_at %>
+        Dernière connexion : <%= time.strftime('%d/%m/%Y - %Hh%M') %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<header>
+  <% content_for :title, "Mettre en ligne un devoir - Siopy.fr" %>
+</header>
+
+<style>
+  select {
+    display: inline-block!important;
+  }
+</style>
+<h3 style="color: grey; text-align: center">METTRE EN LIGNE UN DEVOIR</h3>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <%= render 'form', work: @work %>
+    </div>
+  </div>
+</div>
+
+

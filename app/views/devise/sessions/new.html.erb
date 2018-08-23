@@ -1,0 +1,53 @@
+<header>
+  <% content_for :title, "Connexion - Siopy.fr" %>
+</header>
+
+<style>
+  .custom-control-label::before {
+    background-color: #ffffff;
+  }
+    .btn-info {
+      background-color: #114861!important;
+    }
+
+</style>
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <div class="card">
+        <h5 class="card-header white-text text-center py-4" style="background-color: #114861;">
+          <strong>Connexion</strong>
+        </h5>
+        <div class="card-body px-lg-5 pt-0">
+          <%= form_for(resource, :html => {:class => 'text-center p-5', 'data-bar' => 'baz'}, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <div class="field">
+              <%= f.label :login, 'Pseudo' %><br/>
+              <%= f.text_field :login, autofocus: true, class: 'form-control mb-4' %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password, 'Mot de passe' %><br/>
+              <%= f.password_field :password, autocomplete: "off", class: 'form-control mb-4' %>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me, class: 'form-check-input'%>
+                <%= f.label :remember_me, 'Se souvenir de moi', class: 'custom-control-label' %>
+              </div>
+            <% end -%>
+
+            <div class="actions">
+              <%= f.submit "Me connecter", class: 'btn btn-info btn-block my-4' %>
+            </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

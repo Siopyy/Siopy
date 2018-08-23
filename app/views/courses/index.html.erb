@@ -1,0 +1,58 @@
+<header>
+  <% content_for :title, "Les cours - Siopy.fr" %>
+</header>
+
+<h3 style="color: grey; text-align: center">LES COURS</h3>
+<hr>
+<div class="container">
+    <table id="lesCours" class="table table-striped" style="text-align: center">
+      <thead>
+      <tr>
+        <th class="th-sm">Nom
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Date
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Catégorie
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Voir le descriptif
+        </th>
+        <th class="th-sm">Editer
+        </th>
+        <th class="th-sm">Télécharger
+        </th>
+        <% if user_signed_in? %>
+          <% if current_user.is_admin? %>
+            <th class="th-sm">Supprimer
+            </th>
+          <% end %>
+        <% end %>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.name %></td>
+          <td><%= course.course_date %></td>
+          <td><%= Course_category.find(course.course_category_id).name %> (<%= Professor.find(course.course_category_id).professor_name %>)</td>
+          <td><a href="<%= course_path(course.id) %>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+          <td><a href="<%= edit_course_path(course) %>"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+          <td><a href="<%= course.course_url %>" download><i class="fa fa-download" aria-hidden="true"></i></a></td>
+          <% if user_signed_in? %>
+            <% if current_user.is_admin? %>
+          <td><%= link_to "Supprimer le cours", {:controller => "courses", :action => "delete", :id => course.id} %></td>
+            <% end %>
+          <% end%>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+</div>
+
+
+
+<br>
+

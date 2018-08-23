@@ -1,0 +1,96 @@
+<header>
+  <% content_for :title, "Inscription - Siopy.fr" %>
+</header>
+
+<style>
+  .cyan-skin .btn-info {
+    background-color: #114861 !important;
+  }
+
+  .custom-control-label::before {
+    background-color: #ffffff;
+  }
+
+  btn-info {
+    background-color: #114861 !important;
+  }
+
+
+</style>
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <div class="card">
+        <h5 class="card-header white-text text-center py-4" style="background-color: #114861;">
+          <strong>Inscription</strong>
+        </h5>
+
+        <div class="card-body px-lg-5 pt-0">
+
+          <%= form_for(resource, :html => {:class => 'text-center p-5', 'data-bar' => 'baz'}, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="mt-0 mb-3">
+              <div class="field">
+                <%= f.label :username, 'Pseudo' %><br/>
+                <%= f.text_field :username, autocomplete: "username", class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="form-row mb-3">
+
+              <div class="col">
+                  <div class="field">
+                    <%= f.label :last_name, 'Nom' %><br/>
+                    <%= f.text_field :last_name, autocomplete: "last_name", class: 'form-control' %>
+                  </div>
+              </div>
+
+              <div class="col">
+                <div class="field">
+                  <%= f.label :first_name, 'Prénom' %><br/>
+                  <%= f.text_field :first_name, autocomplete: "first_name", class: 'form-control' %>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-0 mb-3">
+              <div class="field">
+                <%= f.label :email, 'Adresse mail' %><br/>
+                <%= f.email_field :email, autocomplete: "email", class: 'form-control' %>
+              </div>
+            </div>
+
+              <div class="field mb-3">
+                <%= f.label :password, 'Mot de passe' %>
+                <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+              </div>
+
+              <div class="field mb-5">
+                <%= f.label :password_confirmation, 'Confirmation du mot de passe ' %><br/>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+              </div>
+
+
+            <div class="actions">
+              <%= f.submit "S'inscrire", class: 'btn btn-info btn-block my-4', style: 'background-color: #114861' %>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

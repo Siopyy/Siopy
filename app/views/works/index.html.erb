@@ -1,0 +1,53 @@
+<header>
+  <% content_for :title, "Les devoirs - Siopy.fr" %>
+</header>
+
+<h3 style="color: grey; text-align: center">LES DEVOIRS</h3>
+<hr>
+<div class="container">
+  <p class="description" style="text-align: center;"> Voici la liste des activités à faire. Si il manque des activités, n'hésite pas à les ajouter ! </p>
+  <br>
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <% @works.each do |work| %>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#<%= work.id %>" role="tab" aria-controls="profile"><%= work.work_name %> (Pour le <%= work.work_date %>)</a>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <% @works.each do |work| %>
+        <div class="tab-pane fade" id="<%= work.id %>" role="tabpanel" aria-labelledby="list-profile-list">
+          <div class="row" style="text-align: center;">
+            <h4><span class="badge badge-pill indigo">Professeur : <%= Professor.find(work.course_category_id).professor_name %></span>
+            </h4>
+
+            <h4><span class="badge badge-pill red ml-2 mr-5">Matière : <%= Course_category.find(work.course_category_id).name %></span>
+            </h4>
+          </div>
+          <hr>
+          <br>
+          <h5><%= work.work_description %></h5>
+          <% if user_signed_in? %>
+            <% if current_user.is_admin? %>
+              <%= link_to "Supprimer le devoir", {:controller => "works", :action => "delete", :id => work.id} %>
+            <% end %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mt-5">
+      <%= link_to 'Ajouter un nouveau devoir', new_work_path %>
+    </div>
+  </div>
+
+</div>
+
+
+<br>
+
+

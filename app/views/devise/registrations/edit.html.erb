@@ -1,0 +1,90 @@
+<header>
+  <% content_for :title, "Editer mon profil - Siopy.fr" %>
+</header>
+
+<style>
+  .custom-control-label::before {
+    background-color: #ffffff;
+  }
+  .btn-info {
+    background-color: #ffa742!important;
+  }
+</style>
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h5 class="card-header white-text text-center py-4" style="background-color: #114861;">
+          <strong>Editer mon profil</strong>
+        </h5>
+        <div class="card-body px-lg-5 pt-0">
+          <%= form_for(resource, :html => {:class => 'text-center p-5'}, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="mt-0 mb-3 mt-4">
+              <div class="field">
+                <%= f.label :email, 'Adresse mail (Non modifiable)' %><br/>
+                <%= f.email_field :email, autocomplete: "email", class: 'form-control disabled' %>
+              </div>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="mt-0 mb-3">
+              <div class="field">
+                <%= f.label :password, 'Mot de passe', autocomplete: "off" %>
+                <i>(Laisser vide si vous ne voulez pas le changer)</i><br/>
+                <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+                <% if @minimum_password_length %>
+                  <small class="form-text text-muted">
+                    <%= @minimum_password_length %> caractères minimum</em>
+                  </small>
+                <% end %>
+              </div>
+            </div>
+
+            <div class="mt-0 mb-3">
+              <div class="field">
+                <%= f.label :password_confirmation, 'Confirmation du mot de passe' %><br/>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="mt-0 mb-3">
+              <div class="field">
+                <%= f.label :current_password, 'Mot de passe actuel' %>
+                <i>(Nous avons besoin de votre mot de passe actuel pour confirmer vos modifications)</i><br/>
+                <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Mettre à jour mes informations", class: 'btn btn-success btn-block my-4' %>
+            </div>
+
+          <% end %>
+
+      </div>
+    </div>
+  </div>
+    <div class="offset-md-1 col-md-5">
+      <div class="card">
+        <h5 class="card-header white-text text-center py-4" style="background-color: #114861;">
+          <strong>Supprimer mon compte</strong>
+        </h5>
+        <div class="card-body px-lg-5 pt-0">
+          <% time = current_user[:created_at] %>
+          <h5 class="mt-4" style="text-align: center">Vous n'êtes pas satisfait ?</h5>
+          <p class="mt-3" style="text-align: center">Vous êtes arrivé(e) au sein de la communauté le  <%= time.strftime('%d/%m/%Y') %>.. Pourquoi nous quitter maintenant ? </p>
+          <p><%= button_to "Supprimer mon compte", registration_path(resource_name), data: {confirm: "Êtes-vous sûr?"}, method: :delete, class: 'btn btn-danger btn-block my-4 mt-4' %></p>
+      </div>
+
+    </div>
+</div>
+</div>
+
+
+

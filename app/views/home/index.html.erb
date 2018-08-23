@@ -1,0 +1,87 @@
+<header>
+  <% content_for :title, "Accueil - Siopy.fr" %>
+</header>
+
+<div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5">
+          <h1 class="h1-responsive font-weight-bold mt-sm-5" style="color: #34495e; text-align: center">La nouvelle
+            version est arrivée !</h1>
+          <hr class="hr" style="margin-bottom: 30px">
+          <h6 class="mb-6" style="color: #34495e; text-align: center">Le site de partage de ressources a désormais un nom
+            : Siopy</h6>
+          <br>
+          <div style="display: flex; justify-content: center;" class="smooth-scroll">
+            <a class="btn btn-blue" href="#lesnouveautes">Présentation du site</a>
+            <a class="btn btn-success">Me contacter</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-5 mt-xl-4">
+          <center><%= image_tag("svg_logo.svg", width: '360', height: '360', class: "img-fluid") %></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr style="color: #114861;">
+<section class="my-5" id="lesnouveautes">
+
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Quelles sont les nouveautés ?</h2>
+
+  <p class="lead grey-text text-center w-responsive mx-auto mb-5">La nouvelle version est disponible, votre agenda tient désormais dans un site web.</p>
+
+  <div class="row">
+
+    <div class="col-lg-5 text-center text-lg-left mb-5">
+      <center><%= image_tag("Ruby_logo.svg", width: '200', height: '200', class: "img-fluid") %></center>
+    </div>
+
+
+    <div class="col-lg-7">
+
+      <div class="row mb-3">
+
+        <div class="col-1">
+          <i class="fa fa-mail-forward fa-lg indigo-text"></i>
+        </div>
+
+        <div class="col-xl-10 col-md-11 col-10">
+          <h5 class="font-weight-bold">Sécurité</h5>
+          <p class="grey-text">Grâce à la nouvelle version vous bénéficiez d'une protection complète de votre compte (Réinitialisation de mot de passe, historique de connexion etc.) .</p>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+
+
+        <div class="col-1">
+          <i class="fa fa-mail-forward fa-lg indigo-text"></i>
+        </div>
+
+        <div class="col-xl-10 col-md-11 col-10">
+          <h5 class="font-weight-bold mb-3">Fonctionnalités</h5>
+          <p class="grey-text">De nouvelles fonctionnalités sont également disponible pour la mise en ligne des cours et des devoirs ! (Mise en ligne multiple, etc.)</p>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-1">
+          <i class="fa fa-mail-forward fa-lg indigo-text"></i>
+        </div>
+
+        <div class="col-xl-10 col-md-11 col-10">
+          <h5 class="font-weight-bold mb-3">Nouvelle interface</h5>
+          <p class="grey-text mb-0">Le site fait peau neuve ! Bien plus qu’un simple « relooking », c’est une refonte en profondeur qui a été réalisée.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

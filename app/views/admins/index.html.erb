@@ -1,0 +1,30 @@
+<header>
+  <% content_for :title, "Validation des utilisateurs - Siopy.fr" %>
+
+
+<div class="container">
+  <h3 class="mb-4">Validation des utilisateurs</h3>
+  <table class="table table-bordered mt-3">
+    <thead>
+    <tr>
+      <th scope="col">Adresse mail</th>
+      <th scope="col">Pseudo</th>
+      <th scope="col">Administrateur ?</th>
+      <th scope="col">Confirmer le compte</th>
+      <th scope="col">Supprimer le compte</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <th scope="row"><%= user.email %></th>
+        <td><%= user.username %></td>
+        <td><%= link_to "Rang administrateur", {:controller => "admins", :action => "admin", :id => user.id} %></td>
+        <td><%= link_to "Activer le compte", {:controller => "admins", :action => "update", :id => user.id} %></td>
+        <td><%= link_to "Supprimer le compte", {:controller => "admins", :action => "destroy", :id => user.id} %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

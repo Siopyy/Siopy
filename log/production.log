@@ -1,0 +1,105 @@
+I, [2018-08-22T10:01:03.988051 #8928]  INFO -- : [8f16cb63-a815-44a6-b32a-99020129a9c8] Started GET "/" for 127.0.0.1 at 2018-08-22 10:01:03 +0200
+I, [2018-08-22T10:01:04.009004 #8928]  INFO -- : [8f16cb63-a815-44a6-b32a-99020129a9c8] Processing by HomeController#index as HTML
+I, [2018-08-22T10:01:04.011236 #8928]  INFO -- : [8f16cb63-a815-44a6-b32a-99020129a9c8]   Rendering home/index.html.erb within layouts/application
+I, [2018-08-22T10:01:04.012723 #8928]  INFO -- : [8f16cb63-a815-44a6-b32a-99020129a9c8]   Rendered home/index.html.erb within layouts/application (1.4ms)
+I, [2018-08-22T10:01:04.012873 #8928]  INFO -- : [8f16cb63-a815-44a6-b32a-99020129a9c8] Completed 500 Internal Server Error in 4ms
+F, [2018-08-22T10:01:04.013514 #8928] FATAL -- : [8f16cb63-a815-44a6-b32a-99020129a9c8]   
+F, [2018-08-22T10:01:04.013596 #8928] FATAL -- : [8f16cb63-a815-44a6-b32a-99020129a9c8] ActionView::Template::Error (The asset "svg_logo.svg" is not present in the asset pipeline.):
+F, [2018-08-22T10:01:04.013736 #8928] FATAL -- : [8f16cb63-a815-44a6-b32a-99020129a9c8]     18:           </div>
+[8f16cb63-a815-44a6-b32a-99020129a9c8]     19:         </div>
+[8f16cb63-a815-44a6-b32a-99020129a9c8]     20:         <div class="col-md-6 col-xl-5 mt-xl-4">
+[8f16cb63-a815-44a6-b32a-99020129a9c8]     21:           <center><%= image_tag("svg_logo.svg", width: '360', height: '360', class: "img-fluid") %></center>
+[8f16cb63-a815-44a6-b32a-99020129a9c8]     22:         </div>
+[8f16cb63-a815-44a6-b32a-99020129a9c8]     23:       </div>
+[8f16cb63-a815-44a6-b32a-99020129a9c8]     24:     </div>
+F, [2018-08-22T10:01:04.013767 #8928] FATAL -- : [8f16cb63-a815-44a6-b32a-99020129a9c8]   
+F, [2018-08-22T10:01:04.013790 #8928] FATAL -- : [8f16cb63-a815-44a6-b32a-99020129a9c8] app/views/home/index.html.erb:21:in `_app_views_home_index_html_erb___2969013084188949552_69866098895440'
+I, [2018-08-22T10:01:04.929089 #8928]  INFO -- : [adb2e5ca-ee35-450c-b55c-71df81e0fa5e] Started GET "/favicon.ico" for 127.0.0.1 at 2018-08-22 10:01:04 +0200
+F, [2018-08-22T10:01:04.930045 #8928] FATAL -- : [adb2e5ca-ee35-450c-b55c-71df81e0fa5e]   
+F, [2018-08-22T10:01:04.930186 #8928] FATAL -- : [adb2e5ca-ee35-450c-b55c-71df81e0fa5e] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+F, [2018-08-22T10:01:04.930225 #8928] FATAL -- : [adb2e5ca-ee35-450c-b55c-71df81e0fa5e]   
+F, [2018-08-22T10:01:04.930257 #8928] FATAL -- : [adb2e5ca-ee35-450c-b55c-71df81e0fa5e] actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] railties (5.2.0) lib/rails/engine.rb:524:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[adb2e5ca-ee35-450c-b55c-71df81e0fa5e] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+I, [2018-08-22T10:01:05.313926 #8928]  INFO -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22] Started GET "/" for 127.0.0.1 at 2018-08-22 10:01:05 +0200
+I, [2018-08-22T10:01:05.316859 #8928]  INFO -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22] Processing by HomeController#index as HTML
+I, [2018-08-22T10:01:05.317992 #8928]  INFO -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22]   Rendering home/index.html.erb within layouts/application
+I, [2018-08-22T10:01:05.320001 #8928]  INFO -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22]   Rendered home/index.html.erb within layouts/application (1.8ms)
+I, [2018-08-22T10:01:05.320417 #8928]  INFO -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22] Completed 500 Internal Server Error in 3ms
+F, [2018-08-22T10:01:05.323448 #8928] FATAL -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22]   
+F, [2018-08-22T10:01:05.324265 #8928] FATAL -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22] ActionView::Template::Error (The asset "svg_logo.svg" is not present in the asset pipeline.):
+F, [2018-08-22T10:01:05.324726 #8928] FATAL -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22]     18:           </div>
+[c8c1b4c7-50cb-409f-897a-473d9ed22d22]     19:         </div>
+[c8c1b4c7-50cb-409f-897a-473d9ed22d22]     20:         <div class="col-md-6 col-xl-5 mt-xl-4">
+[c8c1b4c7-50cb-409f-897a-473d9ed22d22]     21:           <center><%= image_tag("svg_logo.svg", width: '360', height: '360', class: "img-fluid") %></center>
+[c8c1b4c7-50cb-409f-897a-473d9ed22d22]     22:         </div>
+[c8c1b4c7-50cb-409f-897a-473d9ed22d22]     23:       </div>
+[c8c1b4c7-50cb-409f-897a-473d9ed22d22]     24:     </div>
+F, [2018-08-22T10:01:05.324829 #8928] FATAL -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22]   
+F, [2018-08-22T10:01:05.324899 #8928] FATAL -- : [c8c1b4c7-50cb-409f-897a-473d9ed22d22] app/views/home/index.html.erb:21:in `_app_views_home_index_html_erb___2969013084188949552_69866098895440'
+I, [2018-08-22T10:01:07.589973 #8928]  INFO -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e] Started GET "/" for 127.0.0.1 at 2018-08-22 10:01:07 +0200
+I, [2018-08-22T10:01:07.591522 #8928]  INFO -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e] Processing by HomeController#index as HTML
+I, [2018-08-22T10:01:07.592778 #8928]  INFO -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e]   Rendering home/index.html.erb within layouts/application
+I, [2018-08-22T10:01:07.595913 #8928]  INFO -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e]   Rendered home/index.html.erb within layouts/application (2.7ms)
+I, [2018-08-22T10:01:07.596333 #8928]  INFO -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e] Completed 500 Internal Server Error in 5ms
+F, [2018-08-22T10:01:07.598110 #8928] FATAL -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e]   
+F, [2018-08-22T10:01:07.598212 #8928] FATAL -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e] ActionView::Template::Error (The asset "svg_logo.svg" is not present in the asset pipeline.):
+F, [2018-08-22T10:01:07.598511 #8928] FATAL -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     18:           </div>
+[0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     19:         </div>
+[0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     20:         <div class="col-md-6 col-xl-5 mt-xl-4">
+[0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     21:           <center><%= image_tag("svg_logo.svg", width: '360', height: '360', class: "img-fluid") %></center>
+[0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     22:         </div>
+[0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     23:       </div>
+[0fc0ffd1-2f3c-41fe-845d-eba647171f8e]     24:     </div>
+F, [2018-08-22T10:01:07.598590 #8928] FATAL -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e]   
+F, [2018-08-22T10:01:07.598662 #8928] FATAL -- : [0fc0ffd1-2f3c-41fe-845d-eba647171f8e] app/views/home/index.html.erb:21:in `_app_views_home_index_html_erb___2969013084188949552_69866098895440'
+I, [2018-08-22T10:03:19.749888 #8986]  INFO -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f] Started GET "/" for 127.0.0.1 at 2018-08-22 10:03:19 +0200
+I, [2018-08-22T10:03:19.774355 #8986]  INFO -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f] Processing by HomeController#index as HTML
+I, [2018-08-22T10:03:19.779318 #8986]  INFO -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f]   Rendering home/index.html.erb within layouts/application
+I, [2018-08-22T10:03:19.781095 #8986]  INFO -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f]   Rendered home/index.html.erb within layouts/application (1.6ms)
+I, [2018-08-22T10:03:19.781304 #8986]  INFO -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f] Completed 500 Internal Server Error in 7ms
+F, [2018-08-22T10:03:19.782239 #8986] FATAL -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f]   
+F, [2018-08-22T10:03:19.782292 #8986] FATAL -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f] ActionView::Template::Error (The asset "svg_logo.svg" is not present in the asset pipeline.):
+F, [2018-08-22T10:03:19.782435 #8986] FATAL -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f]     18:           </div>
+[1aef8009-2e2d-41d4-8795-ec90ed52705f]     19:         </div>
+[1aef8009-2e2d-41d4-8795-ec90ed52705f]     20:         <div class="col-md-6 col-xl-5 mt-xl-4">
+[1aef8009-2e2d-41d4-8795-ec90ed52705f]     21:           <center><%= image_tag("svg_logo.svg", width: '360', height: '360', class: "img-fluid") %></center>
+[1aef8009-2e2d-41d4-8795-ec90ed52705f]     22:         </div>
+[1aef8009-2e2d-41d4-8795-ec90ed52705f]     23:       </div>
+[1aef8009-2e2d-41d4-8795-ec90ed52705f]     24:     </div>
+F, [2018-08-22T10:03:19.782477 #8986] FATAL -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f]   
+F, [2018-08-22T10:03:19.782510 #8986] FATAL -- : [1aef8009-2e2d-41d4-8795-ec90ed52705f] app/views/home/index.html.erb:21:in `_app_views_home_index_html_erb___1349130530416505362_70194059924640'
+I, [2018-08-22T10:03:21.152442 #8986]  INFO -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb] Started GET "/" for 127.0.0.1 at 2018-08-22 10:03:21 +0200
+I, [2018-08-22T10:03:21.153796 #8986]  INFO -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb] Processing by HomeController#index as HTML
+I, [2018-08-22T10:03:21.156528 #8986]  INFO -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb]   Rendering home/index.html.erb within layouts/application
+I, [2018-08-22T10:03:21.160518 #8986]  INFO -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb]   Rendered home/index.html.erb within layouts/application (3.0ms)
+I, [2018-08-22T10:03:21.160966 #8986]  INFO -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb] Completed 500 Internal Server Error in 7ms
+F, [2018-08-22T10:03:21.163963 #8986] FATAL -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb]   
+F, [2018-08-22T10:03:21.164681 #8986] FATAL -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb] ActionView::Template::Error (The asset "svg_logo.svg" is not present in the asset pipeline.):
+F, [2018-08-22T10:03:21.165749 #8986] FATAL -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     18:           </div>
+[90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     19:         </div>
+[90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     20:         <div class="col-md-6 col-xl-5 mt-xl-4">
+[90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     21:           <center><%= image_tag("svg_logo.svg", width: '360', height: '360', class: "img-fluid") %></center>
+[90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     22:         </div>
+[90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     23:       </div>
+[90658e02-fa8b-4c94-a0a9-a65b2d460ceb]     24:     </div>
+F, [2018-08-22T10:03:21.166140 #8986] FATAL -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb]   
+F, [2018-08-22T10:03:21.166537 #8986] FATAL -- : [90658e02-fa8b-4c94-a0a9-a65b2d460ceb] app/views/home/index.html.erb:21:in `_app_views_home_index_html_erb___1349130530416505362_70194059924640'
