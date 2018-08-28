@@ -4,6 +4,6 @@ class AdminMailer < ApplicationMailer
 
   def new_user_waiting_for_approval(email)
     @email = email
-    mail(to: 'vourronjocelyn@protonmail.com', subject: "Nouvel utilisateur en attente de l'approbation de l'administrateur")
+    mail(to: 'vourronjocelyn@protonmail.com', cc: 'nicolaswurtz@yahoo.fr', subject: "Nouvel utilisateur en attente de l'approbation de l'administrateur")
   end
 end
