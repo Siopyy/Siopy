@@ -9,22 +9,22 @@
 
 <url>
   <loc>https://siopy.fr/</loc>
-  <lastmod>2018-08-23T23:12:52+00:00</lastmod>
+  <lastmod>2018-09-01T19:05:39+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://siopy.fr/users/sign_in</loc>
-  <lastmod>2018-08-23T23:12:52+00:00</lastmod>
+  <loc>https://siopy.fr/connexion</loc>
+  <lastmod>2018-09-01T19:05:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://siopy.fr/users/sign_up</loc>
-  <lastmod>2018-08-23T23:12:52+00:00</lastmod>
+  <loc>https://siopy.fr/inscription</loc>
+  <lastmod>2018-09-01T19:05:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://siopy.fr/users/password/new</loc>
-  <lastmod>2018-08-23T23:12:52+00:00</lastmod>
+  <loc>https://siopy.fr/motdepasse/new</loc>
+  <lastmod>2018-09-01T19:05:39+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
