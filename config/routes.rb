@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :works
   resources :courses
-  devise_for :users, path: '', path_names: { sign_in: 'connexion', sign_out: 'déconnexion', sign_up: 'inscription'}
+  devise_for :users, path: '', path_names: { sign_in: 'connexion', sign_out: 'déconnexion', sign_up: 'inscription', password: 'motdepasse'}
   root to: 'home#index'
   get "backupjv" => "home#backup", :as => :backupjv
   get "moncompte" => "users#show", :as => :moncompte
