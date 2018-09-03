@@ -28,8 +28,7 @@
   </div>
 
   <div class="field mt-3 mb-3">
-    <%= form.label :course_date, "Date du cours" %>
-    <%= form.text_field :course_date, :data => {:provide => "datepicker", 'date-format' => 'dd/mm/yyyy'}, :required => true, class: "form-control", :autocomplete => :off %>
+    <%= form.hidden_field :course_date, value: Time.now.strftime('%d/%m/%Y') %>
   </div>
 
   <div class="field mt-3 mb-3">
