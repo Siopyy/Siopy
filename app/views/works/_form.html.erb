@@ -29,8 +29,8 @@
 
   <div class="field mt-3">
     <%= form.label :work_date, "Date du devoir" %>
-    <%= form.text_field :work_date, :data => {:provide => "datepicker", 'date-format' => 'dd/mm/yyyy'}, :required => true, class: "form-control", :autocomplete => :off %>
-  </div>
+    <%= form.date_field :work_date, as: :date, value: form.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>  </div>
+
 
   <div class="field mt-3">
     <%= form.label :course_category_id, "Catégorie" %>
