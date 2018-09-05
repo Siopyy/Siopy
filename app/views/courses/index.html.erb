@@ -37,7 +37,8 @@
         <tr>
           <td><%= course.name %></td>
           <td><%= course.course_date %></td>
-          <td><%= Course_category.find(course.course_category_id).name %> (<%= Professor.find(course.course_category_id).professor_name %>)</td>
+          <% numprof = Course_category.find(course.course_category_id).professor_id %>
+          <td><%= Course_category.find(course.course_category_id).name %> (<%= Professor.find(numprof).professor_name %>)</td>
           <td><a href="<%= course_path(course.id) %>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
           <td><a href="<%= edit_course_path(course) %>"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
           <td><a href="<%= course.course_url %>" download><i class="fa fa-download" aria-hidden="true"></i></a></td>

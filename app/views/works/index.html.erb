@@ -20,7 +20,8 @@
         <% @works.each do |work| %>
         <div class="tab-pane fade" id="<%= work.id %>" role="tabpanel" aria-labelledby="list-profile-list">
           <div class="row" style="text-align: center;">
-            <h4><span class="badge badge-pill indigo">Professeur : <%= Professor.find(work.course_category_id).professor_name %></span>
+            <% numprof = Course_category.find(work.course_category_id).professor_id %>
+            <h4><span class="badge badge-pill indigo">Professeur : <%= Professor.find(numprof).professor_name %></span>
             </h4>
 
             <h4><span class="badge badge-pill red ml-2 mr-5">Matière : <%= Course_category.find(work.course_category_id).name %></span>

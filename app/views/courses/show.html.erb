@@ -25,7 +25,8 @@
       <!-- Text -->
       <div class="row justify-content-center">
         <p class="mb-0"><i class="fa fa-calendar mr-2"></i><%= @course.course_date %></p>
-        <p class="mb-0"><i class="fa fa-graduation-cap mr-2 ml-3"></i><%= Course_category.find(@course.course_category_id).name %> (<%= Professor.find(@course.course_category_id).professor_name %>)</p>
+        <% numprof = Course_category.find(@course.course_category_id).professor_id %>
+        <p class="mb-0"><i class="fa fa-graduation-cap mr-2 ml-3"></i><%= Course_category.find(@course.course_category_id).name %> (<%= Professor.find(numprof).professor_name %>)</p>
       </div>
 
 
