@@ -17,7 +17,6 @@
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
 //= require bootstrap-datepicker/core
-//= require flatpickr
 
 $(document).on("focus", "[data-behaviour~='datepicker']", function(e){
     $(this).datepicker({"format": "dd-mm-yyyy", "weekStart": 1, "autoclose": true})

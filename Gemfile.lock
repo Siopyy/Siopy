@@ -107,8 +107,6 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
-    flatpickr_rails (1.1.0)
-      railties (>= 3.0)
     font-roboto-rails (0.0.3)
       less
     globalid (0.4.1)
@@ -252,7 +250,6 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
-  flatpickr_rails
   font-roboto-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
