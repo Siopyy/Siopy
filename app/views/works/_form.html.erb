@@ -29,7 +29,7 @@
 
   <div class="field mt-3">
     <%= form.label :work_date, "Date du devoir" %>
-    <%= form.date_field :work_date, as: :date, value: form.object.try(:strftime,"%d/%m/%Y"), class: 'form-control' %>  </div>
+    <%= form.text_field :work_date, id: 'flatpickr-input', class: 'form-control' %>  </div>
 
 
   <div class="field mt-3">
@@ -41,3 +41,8 @@
     <%= form.submit "Valider", class: "btn btn-info pull-right" %>
   </div>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+    flatpickr('#flatpickr-input');
+</script>
+

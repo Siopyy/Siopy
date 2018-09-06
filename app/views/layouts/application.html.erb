@@ -9,6 +9,7 @@
     <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
     <meta name="keywords" content="vourron jocelyn,vourron,jocelyn,siopy, sio py, siopy ressources"/>
     <meta name="robots" content="index, follow"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script type="application/ld+json">
     { "@context" : "https://www.siopy.fr",
       "@type" : "Organization",
@@ -169,6 +170,9 @@
   <%= javascript_include_tag 'popper.min.js' %>
   <%= javascript_include_tag 'mdb.min.js' %>
   <%= javascript_include_tag 'datatables.min.js' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.1/flatpickr.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.1/l10n/fr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.1/flatpickr.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
   <script>
@@ -177,6 +181,29 @@
       Ps.initialize(sideNavScrollbar);
       $('.mdb-select').material_select('destroy');
   </script>
+
+  <script>
+      $("#flatpickr-input").flatpickr({
+          enableTime: false,
+          dateFormat: "d F Y",
+          locale: {
+              firstDayOfWeek: 1,
+              rangeSeparator: " au ",
+              weekAbbreviation: "Sem",
+              scrollTitle: "Défiler pour augmenter la valeur",
+              toggleTitle: "Cliquer pour basculer",
+              weekdays: {
+                  shorthand: ['dim', 'lun', 'mar', 'mer', 'jeu', 'ven', 'sam'],
+                  longhand: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
+              },
+              months: {
+                  shorthand: ['janv', 'févr', 'mars', 'Аvr', 'Маi', 'Juin', 'Juil', 'Аoût', 'Sept', 'Оct', 'Nov', 'Déc'],
+                  longhand: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+              },
+          },
+      });
+  </script>
+
   <script>
       new WOW().init();
 
