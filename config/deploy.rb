@@ -33,6 +33,11 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+#
+before "deploy:restart", :symlink_directories
+task :symlink_directories do
+  run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+end
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'

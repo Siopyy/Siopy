@@ -29,7 +29,7 @@
 
   <div class="field mt-3">
     <%= form.label :work_date, "Date du devoir" %>
-    <%= form.date_field :work_date, as: :date, value: form.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>  </div>
+    <%= form.date_field :work_date, as: :date, value: form.object.try(:strftime,"%d/%m/%Y"), class: 'form-control' %>  </div>
 
 
   <div class="field mt-3">
