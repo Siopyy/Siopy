@@ -15,13 +15,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: sqlsiopy18
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: siopy
-  username: sqljocelyndev
-  password: 19012017cJ
+  username: root
+  password: sqlsiopy18
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

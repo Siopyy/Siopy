@@ -12,13 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2018_08_21_121517) do
 
-  create_table "course_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "course_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "professor_id"
     t.index ["professor_id"], name: "index_course_categories_on_professor_id"
   end
 
-  create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "course_date"
@@ -29,16 +29,17 @@ ActiveRecord::Schema.define(version: 2018_08_21_121517) do
     t.index ["course_category_id"], name: "index_courses_on_course_category_id"
   end
 
-  create_table "professors", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "professors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "professor_name"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "username", default: "", null: false
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.boolean "prof", default: false, null: false
     t.boolean "is_admin", default: false, null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_121517) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "work_name"
     t.text "work_description"
     t.string "work_date"
